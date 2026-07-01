@@ -11,7 +11,7 @@ const BOOKS: Book[] = booksData;
 
 export function BookGrid() {
   return (
-    <section id="books" className="flex flex-col gap-6 px-6 sm:px-10">
+    <section id="books" className="flex flex-col gap-6">
       <div className="flex items-center justify-between">
         <h2 className="font-display text-2xl font-bold uppercase tracking-wide text-foreground">
           Books

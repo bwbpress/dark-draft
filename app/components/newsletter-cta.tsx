@@ -2,7 +2,7 @@ import { Button } from "./button";
 
 export function NewsletterCta() {
   return (
-    <section className="mx-6 mb-16 flex flex-col gap-6 rounded-2xl border border-glow/30 bg-surface p-6 sm:mx-10 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+    <section className="mb-16 flex flex-col gap-6 rounded-2xl border border-glow/30 bg-surface p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
       <div className="flex items-center gap-4">
         <span className="text-3xl text-accent-pink" aria-hidden>
           ✉

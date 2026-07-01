@@ -2,7 +2,7 @@ import { Button } from "./button";
 
 export function HeroSection() {
   return (
-    <section className="grid gap-10 px-6 py-16 sm:px-10 lg:grid-cols-[1.4fr_1fr] lg:gap-16 lg:py-24">
+    <section className="grid gap-10 py-16 lg:grid-cols-[1.4fr_1fr] lg:gap-16 lg:py-24">
       <div className="flex flex-col items-start gap-6">
         <h1 className="bg-gradient-to-r from-accent-pink to-accent-blue bg-clip-text font-display text-5xl font-bold uppercase tracking-wide text-transparent sm:text-6xl">
           Arlan Chen
