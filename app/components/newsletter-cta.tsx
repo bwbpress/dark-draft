@@ -7,7 +7,7 @@ export function NewsletterCta() {
       as="section"
       border="animated"
       glow
-      className="mb-16 flex flex-col gap-6 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8"
+      className="mb-16 flex flex-col gap-6 p-8 sm:flex-row sm:items-center sm:justify-between"
     >
       <div className="flex items-center gap-4">
         <span className="text-3xl text-accent-pink" aria-hidden>

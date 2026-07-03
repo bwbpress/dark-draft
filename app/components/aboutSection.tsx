@@ -8,7 +8,7 @@ export default function AboutSection() {
          background="gradient"
          border="animated"
          glow
-         className="flex flex-col lg:flex-row gap-4 items-center min-h-30 p-3"
+         className="flex flex-col lg:flex-row gap-4 items-center min-h-30 p-6"
       >
          <div className="flex justify-center items-center aspect-2/3 w-full lg:w-80 shrink-0 rounded-lg bg-linear-to-b from-accent-blue/40 to-surface">
             Author Image

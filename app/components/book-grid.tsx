@@ -23,7 +23,7 @@ export function BookGrid() {
           View All Books →
         </a>
       </div>
-      <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
+      <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
         {BOOKS.map((book, index) => (
           <BookCard
             key={book.title}
