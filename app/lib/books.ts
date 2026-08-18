@@ -86,7 +86,7 @@ export const BOOKS: Book[] = [
     description:
       "SEO_PLACEHOLDER_BOOK_DESCRIPTION_the-datasource: Full back-cover-style description (150-300 words) for The Datasource, book 1 of the Neon Empire series.",
     isbn13: "SEO_PLACEHOLDER_ISBN13_the-datasource",
-    coverImage: "/img/cyberpunk-city-2.png",
+    coverImage: "/img/Arlan-Chen-BG.jpg",
     keywords: [
       "SEO_PLACEHOLDER_KEYWORD_the-datasource-genre-term",
       "SEO_PLACEHOLDER_KEYWORD_the-datasource-trope-term",
@@ -104,7 +104,7 @@ export const BOOKS: Book[] = [
     description:
       "SEO_PLACEHOLDER_BOOK_DESCRIPTION_shadow-signal: Full back-cover-style description (150-300 words) for Shadow Signal, book 2 of the Neon Empire series.",
     isbn13: "SEO_PLACEHOLDER_ISBN13_shadow-signal",
-    coverImage: "/img/cyberpunk-city-2.png",
+    coverImage: "/img/Arlan-Chen-BG.jpg",
     keywords: [
       "SEO_PLACEHOLDER_KEYWORD_shadow-signal-genre-term",
       "SEO_PLACEHOLDER_KEYWORD_shadow-signal-trope-term",
@@ -123,7 +123,7 @@ export const BOOKS: Book[] = [
     description:
       "SEO_PLACEHOLDER_BOOK_DESCRIPTION_neon-exodus: Full back-cover-style description (150-300 words) for Neon Exodus, book 3 of the Neon Empire series.",
     isbn13: "SEO_PLACEHOLDER_ISBN13_neon-exodus",
-    coverImage: "/img/cyberpunk-city-2.png",
+    coverImage: "/img/Arlan-Chen-BG.jpg",
     keywords: [
       "SEO_PLACEHOLDER_KEYWORD_neon-exodus-genre-term",
       "SEO_PLACEHOLDER_KEYWORD_neon-exodus-trope-term",
@@ -142,7 +142,7 @@ export const BOOKS: Book[] = [
     description:
       "SEO_PLACEHOLDER_BOOK_DESCRIPTION_system-breakers: Full back-cover-style description (150-300 words) for System Breakers, a standalone novella.",
     isbn13: "SEO_PLACEHOLDER_ISBN13_system-breakers",
-    coverImage: "/img/cyberpunk-city-2.png",
+    coverImage: "/img/Arlan-Chen-BG.jpg",
     keywords: [
       "SEO_PLACEHOLDER_KEYWORD_system-breakers-genre-term",
       "SEO_PLACEHOLDER_KEYWORD_system-breakers-trope-term",

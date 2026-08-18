@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: `${SITE_NAME} — ${SITE_TAGLINE}`,
     description: DESCRIPTION,
-    images: [{ url: "/img/cyberpunk-city-2.png", width: 1200, height: 630 }],
+    images: [{ url: "/img/Arlan-Chen-BG.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     creator: TWITTER_HANDLE,
     title: `${SITE_NAME} — ${SITE_TAGLINE}`,
     description: DESCRIPTION,
-    images: ["/img/cyberpunk-city-2.png"],
+    images: ["/img/Arlan-Chen-BG.jpg"],
   },
   // TODO(remove-before-launch): SITE_IS_LIVE forces noindex/nofollow
   // site-wide while placeholder content is still in place. Flip it in

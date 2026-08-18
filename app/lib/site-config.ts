@@ -32,7 +32,7 @@ export const AUTHOR_BIO_LONG = [
 
 // Reuse an existing site asset as a stand-in so the build has a real file to
 // point at. Replace with a real author headshot (min 800x800) when ready.
-export const AUTHOR_PHOTO = "/img/cyberpunk-city.jpg";
+export const AUTHOR_PHOTO = "/img/Arlan-Chen-BG.jpg";
 export const AUTHOR_PHOTO_ALT =
   "SEO_PLACEHOLDER_AUTHOR_PHOTO_ALT: Descriptive alt text for Arlan Chen's author photo.";
 
