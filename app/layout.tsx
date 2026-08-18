@@ -1,6 +1,18 @@
 import type { Metadata } from "next";
 import { Orbitron, Inter } from "next/font/google";
 import "./globals.css";
+import { JsonLd } from "./components/json-ld";
+import { buildPersonJsonLd, buildWebsiteJsonLd } from "./lib/structured-data";
+import {
+  AUTHOR_NAME,
+  SEARCH_ENGINE_VERIFICATION,
+  SITE_IS_LIVE,
+  SITE_KEYWORDS,
+  SITE_NAME,
+  SITE_TAGLINE,
+  SITE_URL,
+  TWITTER_HANDLE,
+} from "./lib/site-config";
 
 const orbitron = Orbitron({
   variable: "--font-orbitron",
@@ -13,10 +25,60 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const DESCRIPTION =
+  "Author site for Arlan Chen — near-future fiction about choice, consequence, and the people who refuse to be programmed.";
+
 export const metadata: Metadata = {
-  title: "Arlan Chen — Cyberpunk Stories. Human Heart.",
-  description:
-    "Author site for Arlan Chen — near-future fiction about choice, consequence, and the people who refuse to be programmed.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: DESCRIPTION,
+  keywords: SITE_KEYWORDS,
+  authors: [{ name: AUTHOR_NAME, url: SITE_URL }],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: SITE_NAME,
+    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    description: DESCRIPTION,
+    images: [{ url: "/img/cyberpunk-city-2.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: TWITTER_HANDLE,
+    creator: TWITTER_HANDLE,
+    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    description: DESCRIPTION,
+    images: ["/img/cyberpunk-city-2.png"],
+  },
+  // TODO(remove-before-launch): SITE_IS_LIVE forces noindex/nofollow
+  // site-wide while placeholder content is still in place. Flip it in
+  // app/lib/site-config.ts once the real domain and content are live.
+  robots: SITE_IS_LIVE
+    ? {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-image-preview": "large",
+        },
+      }
+    : {
+        index: false,
+        follow: false,
+      },
+  verification: {
+    google: SEARCH_ENGINE_VERIFICATION.google,
+    other: {
+      "msvalidate.01": SEARCH_ENGINE_VERIFICATION.bing,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -29,7 +91,11 @@ export default function RootLayout({
       lang="en"
       className={`${orbitron.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background">{children}</body>
+      <body className="min-h-full flex flex-col bg-background">
+        <JsonLd data={buildPersonJsonLd()} />
+        <JsonLd data={buildWebsiteJsonLd()} />
+        {children}
+      </body>
     </html>
   );
 }

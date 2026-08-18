@@ -16,10 +16,10 @@ export function HeroSection() {
           refuse to be programmed.
         </p>
         <div className="flex flex-wrap gap-4">
-          <Button href="#books">Explore Books</Button>
-          <Button href="#trailer" variant="neutral">
+          <Button href="/books">Explore Books</Button>
+          {/* <Button href="#trailer" variant="neutral">
             ▷ Watch Trailer
-          </Button>
+          </Button> */}
         </div>
       </div>
 

@@ -5,6 +5,7 @@ type FeaturedBookBannerProps = {
   releaseDate: string;
   seriesLabel: string;
   status: string;
+  href: string;
 };
 
 import { Button } from "./button";
@@ -17,6 +18,7 @@ export function FeaturedBookBanner({
   releaseDate,
   seriesLabel,
   status,
+  href,
 }: FeaturedBookBannerProps) {
   return (
     <GlowPanel
@@ -43,11 +45,11 @@ export function FeaturedBookBanner({
         </div>
       </div>
       <Button
-        href="#notify"
+        href={href}
         variant="outline"
         className="shrink-0 self-start sm:self-center"
       >
-        Notify Me
+        View Details
       </Button>
     </GlowPanel>
   );

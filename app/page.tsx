@@ -6,23 +6,36 @@ import { NewsletterCta } from "./components/newsletter-cta";
 import { SiteFooter } from "./components/site-footer";
 import AboutSection from "./components/aboutSection";
 import BackgroundImageWithOverlay from "./components/BackgroundImageWithOverlay";
+import { getFeaturedBook, getSeriesBySlug } from "./lib/books";
 
 export default function Home() {
+  const featuredBook = getFeaturedBook();
+  const featuredSeries = featuredBook?.seriesSlug
+    ? getSeriesBySlug(featuredBook.seriesSlug)
+    : undefined;
+
   return (
     <div className="relative flex min-h-full flex-1 flex-col bg-background">
-      <BackgroundImageWithOverlay image="/img/cyberpunk-city-2.png" className="mt-40"/>
+      <BackgroundImageWithOverlay image="/img/Arlan-Chen-BG.jpg" className="mt-40"/>
       <div className="relative flex flex-1 flex-col">
         <SiteHeader />
         <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-16 px-6 sm:px-10 lg:px-0">
           <HeroSection />
-          <FeaturedBookBanner
-            eyebrow="Coming Soon"
-            title="Neon Exodus"
-            blurb="A fugitive. A ghost in the net. A city that remembers everything. The next chapter in the Neon Empire saga."
-            releaseDate="Q4 2025"
-            seriesLabel="Neon Empire Book 3"
-            status="Preorder Coming Soon"
-          />
+          {featuredBook && (
+            <FeaturedBookBanner
+              eyebrow={featuredBook.status}
+              title={featuredBook.title}
+              blurb={featuredBook.blurb}
+              releaseDate={featuredBook.releaseDate}
+              seriesLabel={
+                featuredSeries
+                  ? `${featuredSeries.name} Book ${featuredBook.seriesPosition}`
+                  : "Standalone Novella"
+              }
+              status={featuredBook.status}
+              href={`/books/${featuredBook.slug}`}
+            />
+          )}
           <BookGrid />
           <AboutSection/>
           <NewsletterCta />

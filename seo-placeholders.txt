@@ -1,0 +1,50 @@
+SEO PLACEHOLDER CHECKLIST
+=========================
+Every value below appears in the code as SEO_PLACEHOLDER_... (search the
+project case-insensitively for "seo_placeholder" to find each exact spot).
+Files: app/lib/site-config.ts and app/lib/books.ts
+
+SITE
+----
+- Domain (SITE_URL) — the live website address, used for canonical links,
+  sitemap, and social share tags.
+
+AUTHOR
+------
+- Author bio, short — one sentence used in search results/meta description.
+- Author bio, long (3 paragraphs) — full bio for the About page.
+- Author photo alt text — description of the headshot photo, for
+  screen readers and image search.
+
+SOCIAL LINKS
+------------
+- X / Twitter handle
+- Instagram handle
+- TikTok handle
+- Facebook page URL
+- Goodreads author page ID
+- Amazon Author Central page slug
+- BookBub author page slug
+
+SEARCH ENGINE VERIFICATION
+---------------------------
+- Google Search Console verification code
+- Bing Webmaster Tools verification code
+
+KEYWORDS
+--------
+- Site-wide genre/brand keywords (4 short phrases)
+- Per-book genre/trope keywords (2 per book, 4 books)
+
+PER BOOK (repeats for: The Datasource, Shadow Signal, Neon Exodus,
+System Breakers)
+-----------------------------------------------------------------
+- Release date
+- Full back-cover description (150-300 words)
+- ISBN-13
+- Retailer purchase links: Amazon, Apple Books, Kobo, Google Play,
+  Barnes & Noble
+
+SERIES
+------
+- Neon Empire series description (1-2 sentences)

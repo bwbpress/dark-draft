@@ -1,4 +1,7 @@
+import Image from "next/image";
+import Link from "next/link";
 import { GlowPanel } from "./glow-panel";
+import { AUTHOR_BIO_SHORT, AUTHOR_PHOTO, AUTHOR_PHOTO_ALT } from "../lib/site-config";
 
 export default function AboutSection() {
    return (
@@ -10,16 +13,24 @@ export default function AboutSection() {
          glow
          className="flex flex-col lg:flex-row gap-4 items-center min-h-30 p-6"
       >
-         <div className="flex justify-center items-center aspect-2/3 w-full lg:w-80 shrink-0 rounded-lg bg-linear-to-b from-accent-blue/40 to-surface">
-            Author Image
+         <div className="relative aspect-2/3 w-full lg:w-80 shrink-0 overflow-hidden rounded-lg bg-linear-to-b from-accent-blue/40 to-surface">
+            <Image
+               src={AUTHOR_PHOTO}
+               alt={AUTHOR_PHOTO_ALT}
+               fill
+               sizes="(min-width: 1024px) 20rem, 100vw"
+               className="object-cover"
+            />
          </div>
-         <p className="lg:max-w-1/2 text-sm text-white py-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-            qui officia deserunt mollit anim id est laborum.
-         </p>
+         <div className="lg:max-w-1/2 flex flex-col gap-4 py-4">
+            <p className="text-sm text-white">{AUTHOR_BIO_SHORT}</p>
+            <Link
+               href="/about"
+               className="text-sm font-medium text-accent-pink hover:underline"
+            >
+               More About Arlan →
+            </Link>
+         </div>
       </GlowPanel>
    )
 }

@@ -1,10 +1,11 @@
+import Link from "next/link";
 import { GlowPanel } from "./glow-panel";
 
 type BookCardProps = {
   title: string;
   series: string;
   blurb: string;
-  href?: string;
+  href: string;
   animationDelay?: number;
 };
 
@@ -12,7 +13,7 @@ export function BookCard({
   title,
   series,
   blurb,
-  href = "#",
+  href,
   animationDelay,
 }: BookCardProps) {
   return (
@@ -33,12 +34,12 @@ export function BookCard({
         <h3 className="font-display text-base text-foreground">{title}</h3>
         <p className="text-xs uppercase tracking-wide text-muted">{series}</p>
         <p className="text-sm text-muted">{blurb}</p>
-        <a
+        <Link
           href={href}
           className="mt-1 text-sm font-medium text-accent-pink hover:underline"
         >
           Learn More →
-        </a>
+        </Link>
       </div>
     </div>
   );
