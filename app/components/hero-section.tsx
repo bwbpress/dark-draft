@@ -1,5 +1,6 @@
 import { Button } from "./button";
 import { GlowPanel } from "./glow-panel";
+import { SocialLinks } from "./social-links";
 
 export function HeroSection() {
   return (
@@ -11,10 +12,7 @@ export function HeroSection() {
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-muted">
           Cyberpunk Stories. Human Heart.
         </p>
-        <p className="max-w-lg text-base text-muted">
-          I write near-future fiction about choice, consequence, and the people who
-          refuse to be programmed.
-        </p>
+        <SocialLinks />
         <div className="flex flex-wrap gap-4">
           <Button href="/books">Explore Books</Button>
           {/* <Button href="#trailer" variant="neutral">

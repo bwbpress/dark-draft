@@ -7,6 +7,7 @@ import { JsonLd } from "../../components/json-ld";
 import { getAllBooks, getBookBySlug, getSeriesBySlug } from "../../lib/books";
 import { buildBookJsonLd, buildBreadcrumbJsonLd } from "../../lib/structured-data";
 import { SITE_NAME } from "../../lib/site-config";
+import BookCover from "@/app/components/bookCover";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -71,7 +72,7 @@ export default async function BookPage({ params }: Props) {
         </nav>
 
         <div className="grid gap-10 lg:grid-cols-[320px_1fr]">
-          <div className="aspect-2/3 w-full max-w-xs rounded-lg bg-linear-to-b from-accent-blue/40 to-surface" />
+          <BookCover image={book.coverImage} alt={book.coverImageAlt}/>
 
           <div className="flex flex-col gap-5">
             {series && (

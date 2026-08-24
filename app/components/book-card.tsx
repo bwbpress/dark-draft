@@ -30,7 +30,7 @@ export function BookCard({
           {title}
         </span>
       </GlowPanel>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 rounded-lg bg-background/60 p-3 backdrop-blur-sm">
         <h3 className="font-display text-base text-foreground">{title}</h3>
         <p className="text-xs uppercase tracking-wide text-muted">{series}</p>
         <p className="text-sm text-muted">{blurb}</p>

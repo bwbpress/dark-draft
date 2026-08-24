@@ -55,7 +55,6 @@ export type SocialLink = {
 // so Google can tie them together as the same entity (see Person JSON-LD
 // `sameAs` in app/lib/structured-data.ts).
 export const SOCIAL_LINKS: SocialLink[] = [
-  { label: "X / Twitter", href: "https://x.com/SEO_PLACEHOLDER_TWITTER_HANDLE" },
   { label: "Instagram", href: "https://instagram.com/SEO_PLACEHOLDER_INSTAGRAM_HANDLE" },
   { label: "TikTok", href: "https://tiktok.com/@SEO_PLACEHOLDER_TIKTOK_HANDLE" },
   { label: "Facebook", href: "https://facebook.com/SEO_PLACEHOLDER_FACEBOOK_PAGE" },

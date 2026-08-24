@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { GlowPanel } from "../components/glow-panel";
 import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
 import { JsonLd } from "../components/json-ld";
@@ -41,15 +42,22 @@ export default function AboutPage() {
         </nav>
 
         <div className="grid gap-10 lg:grid-cols-[280px_1fr]">
-          <div className="relative aspect-2/3 w-full max-w-xs overflow-hidden rounded-lg bg-linear-to-b from-accent-blue/40 to-surface">
+          <GlowPanel
+            rounded="lg"
+            background="gradient"
+            border="animated"
+            glow
+            className="aspect-2/3 w-full max-w-xs rounded-lg"
+          >
             <Image
-              src={AUTHOR_PHOTO}
-              alt={AUTHOR_PHOTO_ALT}
-              fill
-              sizes="(min-width: 1024px) 280px, 100vw"
-              className="object-cover"
+                src={AUTHOR_PHOTO}
+                alt={AUTHOR_PHOTO_ALT}
+                fill
+                priority
+                sizes="(min-width: 400px) 320px, calc(100vw - 3rem)"
+                className="z-0 rounded-[inherit] object-cover p-0.5"
             />
-          </div>
+          </GlowPanel>
 
           <div className="flex flex-col gap-6">
             <h1 className="font-display text-3xl font-bold text-foreground sm:text-4xl">

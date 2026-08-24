@@ -1,7 +1,7 @@
 import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 
 type Variant = "primary" | "outline" | "neutral";
-type Size = "md" | "sm";
+type Size = "lg" | "md" | "sm";
 
 type CommonProps = {
   variant?: Variant;
@@ -32,6 +32,7 @@ const VARIANT_CLASSES: Record<Variant, string> = {
 };
 
 const SIZE_CLASSES: Record<Size, string> = {
+  lg: "px-10 py-4 text-base",
   md: "px-6 py-3 text-sm",
   sm: "px-4 py-2 text-xs",
 };
