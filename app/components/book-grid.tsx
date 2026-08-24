@@ -28,6 +28,8 @@ export function BookGrid() {
               series={series ? `${series.name} Book ${book.seriesPosition}` : "Standalone Novella"}
               blurb={book.blurb}
               href={`/books/${book.slug}`}
+              coverImage={book.coverImage}
+              coverImageAlt={book.coverImageAlt}
               animationDelay={-(index * 1.3) % 4}
             />
           );

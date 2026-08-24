@@ -1,15 +1,15 @@
 import Image from "next/image";
 import { GlowPanel } from "./glow-panel";
 
-export default function BookCover({ image, alt, animationDelay }: { image: string, alt:string, animationDelay?:number }) {
+export default function BookCover({ image, alt, animationDelay, isAnimated = false, className }: { image: string, alt:string, animationDelay?:number, isAnimated?:boolean, className?:string }) {
    return (
       <GlowPanel
          rounded="lg"
          background="gradient"
-         border="animated"
+         border={isAnimated ? "animated" : "gradient"}
          animationDelay={animationDelay}
          glow
-         className="aspect-2/3 w-full max-w-xs rounded-lg"
+         className={`aspect-2/3 w-full max-w-xs rounded-lg ${className}`}
       >
          <Image
             src={image}

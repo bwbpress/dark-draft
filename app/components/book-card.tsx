@@ -1,11 +1,13 @@
 import Link from "next/link";
-import { GlowPanel } from "./glow-panel";
+import BookCover from "./bookCover";
 
 type BookCardProps = {
   title: string;
   series: string;
   blurb: string;
   href: string;
+  coverImage: string;
+  coverImageAlt: string;
   animationDelay?: number;
 };
 
@@ -14,22 +16,13 @@ export function BookCard({
   series,
   blurb,
   href,
+  coverImage,
+  coverImageAlt,
   animationDelay,
 }: BookCardProps) {
   return (
     <div className="flex flex-col gap-3">
-      <GlowPanel
-        rounded="lg"
-        background="gradient"
-        border="animated"
-        animationDelay={animationDelay}
-        glow
-        className="flex aspect-2/3 w-full items-end p-3"
-      >
-        <span className="font-display text-sm uppercase tracking-wide text-accent-blue">
-          {title}
-        </span>
-      </GlowPanel>
+      <BookCover image={coverImage} alt={coverImageAlt} animationDelay={animationDelay}/>
       <div className="flex flex-col gap-1 rounded-lg bg-background/60 p-3 backdrop-blur-sm">
         <h3 className="font-display text-base text-foreground">{title}</h3>
         <p className="text-xs uppercase tracking-wide text-muted">{series}</p>

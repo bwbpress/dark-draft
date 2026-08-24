@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
 import { JsonLd } from "../components/json-ld";
 import { getAllBooks, getSeriesBySlug } from "../lib/books";
 import { buildBreadcrumbJsonLd } from "../lib/structured-data";
 import { SITE_NAME } from "../lib/site-config";
+import BookCover from "../components/bookCover";
 
 export const metadata: Metadata = {
   title: "Books",
@@ -45,9 +47,13 @@ export default function BooksPage() {
               <Link
                 key={book.slug}
                 href={`/books/${book.slug}`}
-                className="flex flex-col gap-3 rounded-2xl border border-glow/20 bg-surface/50 p-4 transition-colors hover:border-accent-pink"
+                className="flex flex-col gap-3 items-center rounded-2xl border border-glow/20 bg-surface/50 p-4 transition-colors hover:border-accent-pink"
               >
-                <div className="aspect-2/3 w-full rounded-lg bg-linear-to-b from-accent-blue/40 to-surface" />
+                <BookCover
+                  image={book.coverImage}
+                  alt={book.coverImageAlt}
+                  className="max-w-none!"
+                />
                 <div className="flex flex-col gap-1">
                   <h2 className="font-display text-base text-foreground">{book.title}</h2>
                   <p className="text-xs uppercase tracking-wide text-muted">
