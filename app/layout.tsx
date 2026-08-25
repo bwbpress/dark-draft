@@ -26,7 +26,7 @@ const inter = Inter({
 });
 
 const DESCRIPTION =
-  `Author site for ${AUTHOR_BIO_SHORT}`;
+  `Author site for Dystro Han aka dystroh. Dystro is the indie queer romance author of the upcoming epic cyberpunk MM dark romance series, Hack & Harrow.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -47,6 +47,12 @@ export const metadata: Metadata = {
     title: `${SITE_NAME} — ${SITE_TAGLINE}`,
     description: DESCRIPTION,
     // TODO change out opengraph!
+    images: [{ url: "/img/dystro-han-portrait.jpg", width: 1200, height: 630 }],
+  },
+    twitter: {
+    card: "summary_large_image",
+    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    description: DESCRIPTION,
     images: [{ url: "/img/dystro-han-portrait.jpg", width: 1200, height: 630 }],
   },
   // TODO(remove-before-launch): SITE_IS_LIVE forces noindex/nofollow

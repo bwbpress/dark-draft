@@ -44,11 +44,11 @@ export default function AboutPage() {
 
         <div className="grid gap-10 lg:grid-cols-[280px_1fr]">
           <GlowPanel
-            rounded="lg"
+            rounded="full"
             background="gradient"
             border="animated"
             glow
-            className="aspect-2/3 w-full max-w-xs rounded-lg"
+            className="aspect-square w-full max-w-xs"
           >
             <Image
                 src={AUTHOR_PHOTO}

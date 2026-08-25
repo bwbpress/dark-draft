@@ -4,6 +4,22 @@ import { SiteFooter } from "../components/site-footer"
 import { SOCIAL_LINKS } from "../lib/site-config"
 import { Button } from "../components/button"
 import { GlowPanel } from "../components/glow-panel"
+import { AUTHOR_NAME } from "../lib/site-config"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+   title: "Connect",
+   description: `Follow ${AUTHOR_NAME} on Instagram, TikTok, Facebook, Patreon, and Royal Road for updates on the Hack & Harrow series.`,
+   alternates: {
+      canonical: "/connect",
+   },
+   openGraph: {
+      type: "website",
+      url: "/connect",
+      title: `Connect | ${AUTHOR_NAME}`,
+      description: `Follow ${AUTHOR_NAME} on Instagram, TikTok, Facebook, Patreon, and Royal Road for updates on the Hack & Harrow series.`,
+   },
+};
 
 export default function Connect() {
    return (

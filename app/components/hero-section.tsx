@@ -24,10 +24,10 @@ export function HeroSection() {
           Free Short Story
         </p>
         <h2 className="font-display text-xl font-bold text-foreground">
-          Get an Early Access Copy!
+          Get your Advance Reader Copy!
         </h2>
         <p className="text-sm text-muted">
-          Join my newsletter and get an exclusive early access copy of the first installment of the Hack & Harrow story.
+          Join my newsletter and get an exclusive access to the ARC of Static Bind, the first Hack & Harrow short story.
         </p>
         <NewsletterForm
           buttonLabel="Get My Free Story"

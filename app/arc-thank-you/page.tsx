@@ -7,10 +7,10 @@ import { Button } from "../components/button"
 import { GlowPanel } from "../components/glow-panel"
 
 export const metadata: Metadata = {
-   title: "Thanks for Joining",
+   title: "Thanks for Requesting an ARC",
    description: "You're on the list! Here's where else you can find Dystro Han.",
    alternates: {
-      canonical: "/thank-you",
+      canonical: "/arc-thank-you",
    },
    robots: {
       index: false,
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
    },
 };
 
-export default function ThankYou() {
+export default function ArcThankYou() {
    return (
       <div className="relative flex min-h-full flex-1 flex-col bg-background">
          <BackgroundImageWithOverlay image="/img/Dystro-Han-BG.jpg" className="mt-40"/>

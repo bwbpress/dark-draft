@@ -61,7 +61,7 @@ export type SocialLink = {
 export const SOCIAL_LINKS: SocialLink[] = [
   { label: "Patreon", href: "https://www.patreon.com/c/dystrohdreams" },
   { label: "Royal Road", href: "https://www.royalroad.com/profile/987576" },
-  { label: "Instagram", href: " https://www.instagram.com/dystro.han/", },
+  { label: "Instagram", href: "https://www.instagram.com/dystro.han/", },
   { label: "Facebook", href: "https://facebook.com/dystroh.dreams" },
   { label: "TikTok", href: "https://www.tiktok.com/@dystroh" },
   // { label: "Bluesky", href: "https://bsky.app/profile/SEO_PLACEHOLDER_BLUESKY_HANDLE" },

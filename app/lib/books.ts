@@ -120,7 +120,7 @@ export const BOOKS: Book[] = [
       "Static Bind: idiots in love banter",
       "ex rivals with benefits",
     ],
-    retailerLinks: retailerLinksFor("static-bind-a-hack-and-harrow-story"),
+    retailerLinks: retailerLinksFor("hack-and-harrow-book-1-breach"),
   },
 ];
 
