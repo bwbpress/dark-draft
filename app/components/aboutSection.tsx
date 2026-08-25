@@ -11,9 +11,9 @@ export default function AboutSection() {
          background="gradient"
          border="animated"
          glow
-         className="flex flex-col lg:flex-row gap-4 items-center min-h-30 p-6"
+         className="flex flex-col lg:flex-row gap-12 items-center min-h-30 p-6"
       >
-         <div className="relative aspect-2/3 w-full lg:w-80 shrink-0 overflow-hidden rounded-lg bg-linear-to-b from-accent-blue/40 to-surface">
+         <div className="relative aspect-2/3 w-full lg:w-40 shrink-0 overflow-hidden rounded-lg bg-linear-to-b from-accent-blue/40 to-surface">
             <Image
                src={AUTHOR_PHOTO}
                alt={AUTHOR_PHOTO_ALT}

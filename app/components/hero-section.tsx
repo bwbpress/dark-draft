@@ -1,5 +1,6 @@
 import { Button } from "./button";
 import { GlowPanel } from "./glow-panel";
+import { NewsletterForm } from "./newsletter-form";
 import { SocialLinks } from "./social-links";
 
 export function HeroSection() {
@@ -15,9 +16,6 @@ export function HeroSection() {
         <SocialLinks />
         <div className="flex flex-wrap gap-4">
           <Button href="/books">Explore Books</Button>
-          {/* <Button href="#trailer" variant="neutral">
-            ▷ Watch Trailer
-          </Button> */}
         </div>
       </div>
 
@@ -31,12 +29,10 @@ export function HeroSection() {
         <p className="text-sm text-muted">
           Join my newsletter and get an exclusive cyberpunk short story instantly.
         </p>
-        <input
-          type="email"
-          placeholder="Enter your email"
-          className="rounded-lg border border-foreground/20 bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted focus:border-accent-pink focus:outline-none"
+        <NewsletterForm
+          buttonLabel="Get My Free Story"
+          className="flex flex-col gap-4"
         />
-        <Button>Get My Free Story</Button>
         <p className="text-center text-xs text-muted">
           No spam. Unsubscribe anytime.
         </p>

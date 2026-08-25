@@ -32,9 +32,9 @@ export const AUTHOR_BIO_LONG = [
 
 // Reuse an existing site asset as a stand-in so the build has a real file to
 // point at. Replace with a real author headshot (min 800x800) when ready.
-export const AUTHOR_PHOTO = "/img/Arlan-Chen-BG.jpg";
+export const AUTHOR_PHOTO = "/img/bwb-portrait.jpg";
 export const AUTHOR_PHOTO_ALT =
-  "SEO_PLACEHOLDER_AUTHOR_PHOTO_ALT: Descriptive alt text for Arlan Chen's author photo.";
+  "Portrait of Arlan Chen, digitally drawn by the artist themselves.";
 
 // Default keywords for the homepage. Keep this short and specific — the
 // legacy <meta name="keywords"> tag is ignored by Google, but genre/trope

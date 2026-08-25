@@ -24,6 +24,9 @@ export function SiteFooter() {
         <Link href="/about" className="transition-colors hover:text-accent-pink">
           About
         </Link>
+        <Link href="/connect" className="transition-colors hover:text-accent-pink">
+          About
+        </Link>
       </nav>
       <p className="text-center">
         {SITE_NAME}. All rights reserved.

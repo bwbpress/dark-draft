@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Books", href: "/books" },
   { label: "About", href: "/about" },
-  // { label: "Connect", href: "/#newsletter" },
+  // { label: "Connect", href: "/connect" },
 ];
 
 export function SiteHeader() {
@@ -34,8 +34,8 @@ export function SiteHeader() {
           </Link>
         ))}
       </nav>
-      <Button href="/#newsletter" variant="outline" size="sm" className="hidden sm:inline-block">
-        Newsletter
+      <Button href="/connect" variant="outline" size="sm" className="hidden sm:inline-block">
+        Connect
       </Button>
 
       <button
@@ -81,12 +81,12 @@ export function SiteHeader() {
               </Link>
             ))}
             <Button
-              href="/#newsletter"
+              href="/connect"
               variant="outline"
               size="lg"
               onClick={() => setIsMenuOpen(false)}
             >
-              Newsletter
+              Connect
             </Button>
           </nav>
         </div>

@@ -1,5 +1,5 @@
-import { Button } from "./button";
 import { GlowPanel } from "./glow-panel";
+import { NewsletterForm } from "./newsletter-form";
 
 export function NewsletterCta() {
   return (
@@ -22,14 +22,11 @@ export function NewsletterCta() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-        <input
-          type="email"
-          placeholder="Enter your email"
-          className="rounded-lg border border-foreground/20 bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted focus:border-accent-pink focus:outline-none sm:w-64"
-        />
-        <Button>Join The List</Button>
-      </div>
+      <NewsletterForm
+        buttonLabel="Join The List"
+        className="flex flex-col gap-3 sm:flex-row sm:items-center"
+        inputClassName="sm:w-64"
+      />
     </GlowPanel>
   );
 }
