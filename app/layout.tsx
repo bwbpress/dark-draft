@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: `${SITE_NAME} — ${SITE_TAGLINE}`,
     description: DESCRIPTION,
     // TODO change out opengraph!
-    images: [{ url: "/img/Arlan-Chen-BG.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/img/dystro-han-portrait.jpg", width: 1200, height: 630 }],
   },
   // TODO(remove-before-launch): SITE_IS_LIVE forces noindex/nofollow
   // site-wide while placeholder content is still in place. Flip it in

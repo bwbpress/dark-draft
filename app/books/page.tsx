@@ -12,7 +12,7 @@ import BookCover from "../components/bookCover";
 export const metadata: Metadata = {
   title: "Books",
   description:
-    "The complete Dystroh catalog - the Hack & Harrow series with links to every retailer",
+    "The complete Dystro Han catalog - the Hack & Harrow series with links to every retailer",
   alternates: {
     canonical: "/books",
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: "/books",
     title: `Books | ${SITE_NAME}`,
     description:
-      "The complete Dystroh catalog - the Hack & Harrow series with links to every retailer",
+      "The complete Dystro Han catalog - the Hack & Harrow series with links to every retailer",
   },
 };
 

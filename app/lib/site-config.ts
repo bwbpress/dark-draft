@@ -33,7 +33,7 @@ export const AUTHOR_BIO_LONG = [
 
 // Reuse an existing site asset as a stand-in so the build has a real file to
 // point at. Replace with a real author headshot (min 800x800) when ready.
-export const AUTHOR_PHOTO = "/img/dystroh-han-portrait.jpg";
+export const AUTHOR_PHOTO = "/img/dystro-han-portrait.jpg";
 export const AUTHOR_PHOTO_ALT =
   "Portrait of dystroh mm dark romance author, digitally drawn by the artist themselves.";
 

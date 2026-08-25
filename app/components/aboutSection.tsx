@@ -28,7 +28,7 @@ export default function AboutSection() {
                href="/about"
                className="text-sm font-medium text-accent-pink hover:underline"
             >
-               More About Arlan →
+               More About Dystro Han →
             </Link>
          </div>
       </GlowPanel>
