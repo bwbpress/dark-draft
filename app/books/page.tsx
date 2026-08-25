@@ -49,6 +49,7 @@ export default function BooksPage() {
                 <BookCover
                   image={book.coverImage}
                   alt={book.coverImageAlt}
+                  isPlaceholder={book.coverIsPlaceholder}
                   className="max-w-none!"
                 />
                 <div className="flex flex-col gap-1">

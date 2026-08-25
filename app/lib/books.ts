@@ -45,6 +45,8 @@ export type Book = {
   /** Reuses an existing site asset as a stand-in cover; swap for real cover art. */
   coverImage: string;
   coverImageAlt: string;
+  /** True while coverImage is a stand-in — renders a "Cover Coming Soon" overlay instead of the raw placeholder art. */
+  coverIsPlaceholder?: boolean;
   keywords: string[];
   retailerLinks: RetailerLink[];
   /** Shown in the homepage's FeaturedBookBanner. Exactly one book should be featured. */
@@ -93,6 +95,7 @@ export const BOOKS: Book[] = [
     isbn13: "SEO_PLACEHOLDER_ISBN13_the-datasource",
     coverImage: "/img/book-placeholder.jpg",
     coverImageAlt: "PLACEHOLDER ALT",
+    coverIsPlaceholder: true,
     keywords: [
       "Static Bind: idiots in love banter",
       "ex rivals with benefits",
@@ -112,6 +115,7 @@ export const BOOKS: Book[] = [
     isbn13: "SEO_PLACEHOLDER_ISBN13_the-datasource",
     coverImage: "/img/book-placeholder.jpg",
     coverImageAlt: "PLACEHOLDER ALT",
+    coverIsPlaceholder: true,
     keywords: [
       "Static Bind: idiots in love banter",
       "ex rivals with benefits",

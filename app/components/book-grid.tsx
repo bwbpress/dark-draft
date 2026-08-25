@@ -30,6 +30,7 @@ export function BookGrid() {
               href={`/books/${book.slug}`}
               coverImage={book.coverImage}
               coverImageAlt={book.coverImageAlt}
+              coverIsPlaceholder={book.coverIsPlaceholder}
               animationDelay={-(index * 1.3) % 4}
             />
           );
