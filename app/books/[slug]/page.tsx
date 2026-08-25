@@ -8,6 +8,7 @@ import { getAllBooks, getBookBySlug, getSeriesBySlug } from "../../lib/books";
 import { buildBookJsonLd, buildBreadcrumbJsonLd } from "../../lib/structured-data";
 import { SITE_NAME } from "../../lib/site-config";
 import BookCover from "@/app/components/bookCover";
+import { FormattedText } from "../../components/formatted-text";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -39,12 +40,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       isbn: book.isbn13,
       releaseDate: book.releaseDate,
       images: [{ url: book.coverImage, width: 1200, height: 630 }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `${book.title} | ${SITE_NAME}`,
-      description: book.blurb,
-      images: [book.coverImage],
     },
   };
 }
@@ -80,7 +75,7 @@ export default async function BookPage({ params }: Props) {
                 href={`/series/${series.slug}`}
                 className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-pink hover:underline"
               >
-                {series.name} — Book {book.seriesPosition}
+                {series.name} {book.seriesPosition && book.seriesPosition >= 1 ? `— Book ${book.seriesPosition}` : ""}
               </Link>
             )}
             <h1 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
@@ -91,9 +86,7 @@ export default async function BookPage({ params }: Props) {
               {book.releaseDate ? ` · ${book.releaseDate}` : ""}
             </p>
             <p className="max-w-xl text-base text-muted">{book.blurb}</p>
-            <p className="max-w-xl whitespace-pre-line text-sm text-muted">
-              {book.description}
-            </p>
+            <FormattedText text={book.description} className="max-w-xl text-sm text-muted" />
 
             <div className="flex flex-col gap-3 pt-4">
               <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-foreground">

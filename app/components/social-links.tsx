@@ -1,10 +1,5 @@
-import { ReactElement, SVGProps } from "react";
-
-type Social = {
-  name: string;
-  href: string;
-  icon: (props: SVGProps<SVGSVGElement>) => ReactElement;
-};
+import { SVGProps } from "react";
+import { SOCIAL_LINKS } from "../lib/site-config";
 
 function PatreonIcon(props: SVGProps<SVGSVGElement>) {
   return (
@@ -52,29 +47,41 @@ function FacebookIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-const SOCIALS: Social[] = [
-  { name: "Patreon", href: "#", icon: PatreonIcon },
-  { name: "Royal Road", href: "#", icon: RoyalRoadIcon },
-  { name: "TikTok", href: "#", icon: TikTokIcon },
-  { name: "Instagram", href: "#", icon: InstagramIcon },
-  { name: "Facebook", href: "#", icon: FacebookIcon },
-];
+function BlueskyIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.912 0 3.076 0 3.756c0 .68.361 5.339.586 6.153.786 2.869 3.617 3.877 6.19 3.593.125-.017.25-.033.375-.052-.125.02-.25.036-.375.052-3.362.481-6.365 1.632-2.436 6.075 4.327 4.86 5.93-1.031 6.66-3.611.73 2.58 2.333 8.472 6.66 3.611 3.929-4.443.928-5.594-2.436-6.075-.125-.016-.25-.032-.375-.052.125.019.25.035.375.052 2.573.284 5.404-.724 6.19-3.593.225-.814.586-5.473.586-6.153 0-.68-.139-1.844-.902-2.191-.658-.299-1.663-.621-4.3 1.24C16.046 4.747 13.087 8.686 12 10.8z" />
+    </svg>
+  );
+}
+
+const SOCIAL_ICONS = {
+  "Patreon": PatreonIcon,
+  "Royal Road": RoyalRoadIcon,
+  "TikTok": TikTokIcon,
+  "Instagram": InstagramIcon,
+  "Facebook": FacebookIcon,
+  // "Bluesky": BlueskyIcon
+}
 
 export function SocialLinks() {
   return (
     <div className="flex items-center gap-4">
-      {SOCIALS.map(({ name, href, icon: Icon }) => (
-        <a
-          key={name}
-          href={href}
-          aria-label={name}
-          target="_blank"
-          rel="noreferrer"
-          className="text-muted transition-colors hover:text-accent-pink"
-        >
-          <Icon className="h-7 w-7" />
-        </a>
-      ))}
+      {SOCIAL_LINKS.map(({ label, href }) => {
+        const Icon = SOCIAL_ICONS[label] || <p></p>;
+        return (
+          <a
+            key={label}
+            href={href}
+            aria-label={label}
+            target="_blank"
+            rel="noreferrer"
+            className="text-muted transition-colors hover:text-accent-pink"
+          >
+            <Icon className="h-7 w-7" />
+          </a>
+        )
+      })}
     </div>
   );
 }

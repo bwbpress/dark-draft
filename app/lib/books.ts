@@ -17,7 +17,7 @@ export type RetailerLink = {
   url: string;
 };
 
-export type BookStatus = "Available Now" | "Preorder" | "Coming Soon";
+export type BookStatus = "ARCs Available" | "Available Now" | "Preorder" | "Coming Soon";
 
 export type Series = {
   slug: string;
@@ -35,7 +35,11 @@ export type Book = {
   releaseDate: string;
   /** One-sentence hook used on cards and in Open Graph descriptions. */
   blurb: string;
-  /** Full back-cover-style description used on the book page and Book JSON-LD. */
+  /**
+   * Full back-cover-style description used on the book page and Book JSON-LD.
+   * Rendered through FormattedText (app/components/formatted-text.tsx):
+   * separate paragraphs with a blank line, wrap **text** for bold.
+   */
   description: string;
   isbn13: string;
   /** Reuses an existing site asset as a stand-in cover; swap for real cover art. */
@@ -49,10 +53,10 @@ export type Book = {
 
 export const SERIES: Series[] = [
   {
-    slug: "neon-empire",
-    name: "Neon Empire",
+    slug: "hack-and-harrow",
+    name: "Hack & Harrow",
     description:
-      "SEO_PLACEHOLDER_SERIES_DESCRIPTION_NEON_EMPIRE: One or two sentences describing the Neon Empire series arc, for the /series page and BookSeries JSON-LD.",
+      "Enter the world of near-future dystopian Boston with rival Ledger mercenaries Hack & Harrow as they join up to simply survive, and start to uncover the depths of the Ledger's corruption along the way... Hack & Harrow is a dark MM action romance series. Come on the journey with this dangerous enemies-to-lovers pair and witness their epic HEA at the end of the series!",
   },
 ];
 
@@ -77,82 +81,42 @@ function retailerLinksFor(bookSlug: string): RetailerLink[] {
 
 export const BOOKS: Book[] = [
   {
-    slug: "the-datasource",
-    title: "The Datasource",
-    seriesSlug: "neon-empire",
-    seriesPosition: 1,
-    status: "Available Now",
-    releaseDate: "SEO_PLACEHOLDER_RELEASE_DATE_the-datasource",
-    blurb: "In a city of surveillance, secrets are the only currency that matters.",
+    slug: "static-bind-a-hack-and-harrow-story",
+    title: "Static Bind: A Hack & Harrow Story",
+    seriesSlug: "hack-and-harrow",
+    seriesPosition: null,
+    status: "ARCs Available",
+    releaseDate: "September 14, 2026",
+    blurb: "Two dangerous mercenaries on the run make a sexy wager on an impromptu side job and avoid having revelations about their hopeless emotional entanglement with each other. Explore the world of Hack & Harrow with this standalone short.",
     description:
-      "SEO_PLACEHOLDER_BOOK_DESCRIPTION_the-datasource: Full back-cover-style description (150-300 words) for The Datasource, book 1 of the Neon Empire series.",
+      "**bold** Two fugitive mercenaries. One steamy wager. Enough denial to reduce competent killers to obsessive idiots.**bold** \n\n It's been a long day. Tiernan just wants to settle in for the night, maybe have an emotionally detached bang with his unlikely, smokin' hot ally, and take a long, luxurious bath… not that he has access to a bathtub. So of course Danil has to drag things out by proposing this dumb kinky bet that pits them against each other in an unscheduled side heist. That smartass enigma of a hitman knows Tiernan can't turn down a little competition, no matter how tired he is.\n\n Danil has always been a makeout guy. Sure, sex is great, but there's just something electrifying about the ridiculous act of mashing your face into someone else's. Just his luck that his unbelievably sexy nemesis-with-benefits is all but allergic to kissing. Their time on the run together has been a thrill -- Tiernan is lethally adept, holds his own against Danil's nonstop heckling, and is absolutely wild in bed. If only there were about five hundred times more kissing, then this would be the perfect temporary arrangement. He couldn't possibly want any more out of this, right? \n\n Winner Takes Loser is a high-heat, emotionally messy, and danger-packed bonus story from an multi-part action-romance series set in dystopian cyberpunk Boston, starring these two violently unhinged men who would rather be tied up than face their feelings.",
     isbn13: "SEO_PLACEHOLDER_ISBN13_the-datasource",
     coverImage: "/img/book-placeholder.jpg",
     coverImageAlt: "PLACEHOLDER ALT",
     keywords: [
-      "SEO_PLACEHOLDER_KEYWORD_the-datasource-genre-term",
-      "SEO_PLACEHOLDER_KEYWORD_the-datasource-trope-term",
+      "Static Bind: idiots in love banter",
+      "ex rivals with benefits",
     ],
-    retailerLinks: retailerLinksFor("the-datasource"),
+    retailerLinks: retailerLinksFor("static-bind-a-hack-and-harrow-story"),
+    featured: true
   },
   {
-    slug: "shadow-signal",
-    title: "Shadow Signal",
-    seriesSlug: "neon-empire",
-    seriesPosition: 2,
-    status: "Available Now",
-    releaseDate: "SEO_PLACEHOLDER_RELEASE_DATE_shadow-signal",
-    blurb: "Some messages should never be received.",
-    description:
-      "SEO_PLACEHOLDER_BOOK_DESCRIPTION_shadow-signal: Full back-cover-style description (150-300 words) for Shadow Signal, book 2 of the Neon Empire series.",
-    isbn13: "SEO_PLACEHOLDER_ISBN13_shadow-signal",
-    coverImage: "/img/book-placeholder.jpg",
-    coverImageAlt: "PLACEHOLDER ALT",
-    keywords: [
-      "SEO_PLACEHOLDER_KEYWORD_shadow-signal-genre-term",
-      "SEO_PLACEHOLDER_KEYWORD_shadow-signal-trope-term",
-    ],
-    retailerLinks: retailerLinksFor("shadow-signal"),
-  },
-  {
-    slug: "neon-exodus",
-    title: "Neon Exodus",
-    seriesSlug: "neon-empire",
-    seriesPosition: 3,
+    slug: "hack-and-harrow-book-1-breach",
+    title: "Hack & Harrow Book 1: Breach",
+    seriesSlug: "hack-and-harrow",
+    seriesPosition: 1,
     status: "Coming Soon",
-    releaseDate: "SEO_PLACEHOLDER_RELEASE_DATE_neon-exodus",
-    blurb:
-      "A fugitive. A ghost in the net. A city that remembers everything. The next chapter in the Neon Empire saga.",
-    description:
-      "SEO_PLACEHOLDER_BOOK_DESCRIPTION_neon-exodus: Full back-cover-style description (150-300 words) for Neon Exodus, book 3 of the Neon Empire series.",
-    isbn13: "SEO_PLACEHOLDER_ISBN13_neon-exodus",
+    releaseDate: "Q1 2027",
+    blurb: "Coming Early 2027",
+    description: "",
+    isbn13: "SEO_PLACEHOLDER_ISBN13_the-datasource",
     coverImage: "/img/book-placeholder.jpg",
     coverImageAlt: "PLACEHOLDER ALT",
     keywords: [
-      "SEO_PLACEHOLDER_KEYWORD_neon-exodus-genre-term",
-      "SEO_PLACEHOLDER_KEYWORD_neon-exodus-trope-term",
+      "Static Bind: idiots in love banter",
+      "ex rivals with benefits",
     ],
-    retailerLinks: retailerLinksFor("neon-exodus"),
-    featured: true,
-  },
-  {
-    slug: "system-breakers",
-    title: "System Breakers",
-    seriesSlug: null,
-    seriesPosition: null,
-    status: "Available Now",
-    releaseDate: "SEO_PLACEHOLDER_RELEASE_DATE_system-breakers",
-    blurb: "A rebellion is coded in blood and chrome.",
-    description:
-      "SEO_PLACEHOLDER_BOOK_DESCRIPTION_system-breakers: Full back-cover-style description (150-300 words) for System Breakers, a standalone novella.",
-    isbn13: "SEO_PLACEHOLDER_ISBN13_system-breakers",
-    coverImage: "/img/book-placeholder.jpg",
-    coverImageAlt: "PLACEHOLDER ALT",
-    keywords: [
-      "SEO_PLACEHOLDER_KEYWORD_system-breakers-genre-term",
-      "SEO_PLACEHOLDER_KEYWORD_system-breakers-trope-term",
-    ],
-    retailerLinks: retailerLinksFor("system-breakers"),
+    retailerLinks: retailerLinksFor("static-bind-a-hack-and-harrow-story"),
   },
 ];
 

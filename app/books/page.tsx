@@ -12,7 +12,7 @@ import BookCover from "../components/bookCover";
 export const metadata: Metadata = {
   title: "Books",
   description:
-    "The complete Arlan Chen catalog — the Neon Empire series and standalone cyberpunk fiction, with links to every retailer.",
+    "The complete Dystroh catalog - the Hack & Harrow series with links to every retailer",
   alternates: {
     canonical: "/books",
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: "/books",
     title: `Books | ${SITE_NAME}`,
     description:
-      "The complete Arlan Chen catalog — the Neon Empire series and standalone cyberpunk fiction, with links to every retailer.",
+      "The complete Dystroh catalog - the Hack & Harrow series with links to every retailer",
   },
 };
 
@@ -36,9 +36,6 @@ export default function BooksPage() {
           <h1 className="font-display text-3xl font-bold uppercase tracking-wide text-foreground sm:text-4xl">
             Books
           </h1>
-          <p className="max-w-2xl text-sm text-muted">
-            The full catalog, in and out of the Neon Empire series.
-          </p>
         </div>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {books.map((book) => {
@@ -57,7 +54,7 @@ export default function BooksPage() {
                 <div className="flex flex-col gap-1">
                   <h2 className="font-display text-base text-foreground">{book.title}</h2>
                   <p className="text-xs uppercase tracking-wide text-muted">
-                    {series ? `${series.name} Book ${book.seriesPosition}` : "Standalone Novella"}
+                    {series ? `${series.name} ${book.seriesPosition && book.seriesPosition >= 1 ? `Book ${book.seriesPosition}` : ""}` : "Standalone Novella"}
                   </p>
                   <p className="text-sm text-muted">{book.blurb}</p>
                   <span className="mt-1 text-xs font-semibold uppercase tracking-wide text-accent-blue">

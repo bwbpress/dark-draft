@@ -25,7 +25,7 @@ export function BookGrid() {
             <BookCard
               key={book.slug}
               title={book.title}
-              series={series ? `${series.name} Book ${book.seriesPosition}` : "Standalone Novella"}
+              series={series ? `${series.name} ${book.seriesPosition && book.seriesPosition >= 1 ? `Book ${book.seriesPosition}` : ""}` : "Standalone Novella"}
               blurb={book.blurb}
               href={`/books/${book.slug}`}
               coverImage={book.coverImage}

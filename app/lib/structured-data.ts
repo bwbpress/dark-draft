@@ -11,6 +11,7 @@ import {
   SOCIAL_LINKS,
 } from "./site-config";
 import type { Book, Series } from "./books";
+import { toPlainText } from "../components/formatted-text";
 
 function absoluteUrl(path: string): string {
   return new URL(path, SITE_URL).toString();
@@ -45,7 +46,7 @@ export function buildBookJsonLd(book: Book, series: Series | undefined) {
     name: book.title,
     url: absoluteUrl(`/books/${book.slug}`),
     image: absoluteUrl(book.coverImage),
-    description: book.description,
+    description: toPlainText(book.description),
     isbn: book.isbn13,
     inLanguage: "en",
     author: {

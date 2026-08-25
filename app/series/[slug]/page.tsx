@@ -71,9 +71,11 @@ export default async function SeriesPage({ params }: Props) {
                 href={`/books/${book.slug}`}
                 className="flex items-center gap-4 rounded-2xl border border-glow/20 bg-surface/50 p-4 transition-colors hover:border-accent-pink"
               >
-                <span className="font-display text-2xl text-accent-blue">
-                  {book.seriesPosition}
-                </span>
+                {book.seriesPosition && 
+                  <span className="font-display text-2xl text-accent-blue">
+                    {book.seriesPosition}
+                  </span>
+                }
                 <div className="flex flex-col gap-1">
                   <h2 className="font-display text-base text-foreground">{book.title}</h2>
                   <p className="text-sm text-muted">{book.blurb}</p>

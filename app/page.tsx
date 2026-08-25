@@ -27,11 +27,7 @@ export default function Home() {
               title={featuredBook.title}
               blurb={featuredBook.blurb}
               releaseDate={featuredBook.releaseDate}
-              seriesLabel={
-                featuredSeries
-                  ? `${featuredSeries.name} Book ${featuredBook.seriesPosition}`
-                  : "Standalone Novella"
-              }
+              seriesLabel={featuredSeries ? `${featuredSeries.name} ${featuredBook.seriesPosition && featuredBook.seriesPosition >= 1 ? `Book ${featuredBook.seriesPosition}` : ""}` : "Standalone Novella"}
               status={featuredBook.status}
               href={`/books/${featuredBook.slug}`}
             />

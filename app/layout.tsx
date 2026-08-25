@@ -5,13 +5,13 @@ import { JsonLd } from "./components/json-ld";
 import { buildPersonJsonLd, buildWebsiteJsonLd } from "./lib/structured-data";
 import {
   AUTHOR_NAME,
+  AUTHOR_BIO_SHORT,
   SEARCH_ENGINE_VERIFICATION,
   SITE_IS_LIVE,
   SITE_KEYWORDS,
   SITE_NAME,
   SITE_TAGLINE,
   SITE_URL,
-  TWITTER_HANDLE,
 } from "./lib/site-config";
 
 const orbitron = Orbitron({
@@ -26,7 +26,7 @@ const inter = Inter({
 });
 
 const DESCRIPTION =
-  "Author site for Arlan Chen — near-future fiction about choice, consequence, and the people who refuse to be programmed.";
+  `Author site for ${AUTHOR_BIO_SHORT}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -46,15 +46,8 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: `${SITE_NAME} — ${SITE_TAGLINE}`,
     description: DESCRIPTION,
+    // TODO change out opengraph!
     images: [{ url: "/img/Arlan-Chen-BG.jpg", width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: TWITTER_HANDLE,
-    creator: TWITTER_HANDLE,
-    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
-    description: DESCRIPTION,
-    images: ["/img/Arlan-Chen-BG.jpg"],
   },
   // TODO(remove-before-launch): SITE_IS_LIVE forces noindex/nofollow
   // site-wide while placeholder content is still in place. Flip it in
