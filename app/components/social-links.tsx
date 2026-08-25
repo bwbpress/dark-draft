@@ -66,7 +66,7 @@ const SOCIAL_ICONS = {
 
 export function SocialLinks() {
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-4" aria-label="Social Links">
       {SOCIAL_LINKS.map(({ label, href }) => {
         const Icon = SOCIAL_ICONS[label] || <p></p>;
         return (
@@ -75,7 +75,7 @@ export function SocialLinks() {
             href={href}
             aria-label={label}
             target="_blank"
-            rel="noreferrer"
+            rel="me noreferrer"
             className="text-muted transition-colors hover:text-accent-pink"
           >
             <Icon className="h-7 w-7" />

@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/`, changeFrequency: "monthly", priority: 1 },
     { url: `${SITE_URL}/books`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE_URL}/about`, changeFrequency: "yearly", priority: 0.6 },
+    { url: `${SITE_URL}/connect`, changeFrequency: "yearly", priority: 0.5 },
   ];
 
   const bookRoutes: MetadataRoute.Sitemap = getAllBooks().map((book) => ({
