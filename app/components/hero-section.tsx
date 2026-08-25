@@ -11,7 +11,7 @@ export function HeroSection() {
           Dystro Han
         </h1>
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-muted">
-          Cyberpunk Stories. Human Heart.
+          Dystrohpian Dreams: Home of Hack & Harrow
         </p>
         <SocialLinks />
         <div className="flex flex-wrap gap-4">
@@ -24,17 +24,17 @@ export function HeroSection() {
           Free Short Story
         </p>
         <h2 className="font-display text-xl font-bold text-foreground">
-          Get The Blacksite Protocol
+          Get an Early Access Copy!
         </h2>
         <p className="text-sm text-muted">
-          Join my newsletter and get an exclusive cyberpunk short story instantly.
+          Join my newsletter and get an exclusive early access copy of the first installment of the Hack & Harrow story.
         </p>
         <NewsletterForm
           buttonLabel="Get My Free Story"
           className="flex flex-col gap-4"
         />
         <p className="text-center text-xs text-muted">
-          No spam. Unsubscribe anytime.
+          No spam. Unsubscribe anytime!
         </p>
       </GlowPanel>
     </section>

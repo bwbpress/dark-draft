@@ -19,7 +19,7 @@ export default function Home() {
       <BackgroundImageWithOverlay image="/img/Dystro-Han-BG.jpg" className="mt-40"/>
       <div className="relative flex flex-1 flex-col">
         <SiteHeader />
-        <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-16 px-6 sm:px-10 lg:px-0">
+        <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-16 px-6 sm:px-10 lg:px-8 xl:px-0">
           <HeroSection />
           {featuredBook && (
             <FeaturedBookBanner

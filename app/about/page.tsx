@@ -14,6 +14,7 @@ import {
   AUTHOR_PHOTO_ALT,
   SOCIAL_LINKS,
 } from "../lib/site-config";
+import { SocialLinks } from "../components/social-links";
 
 export const metadata: Metadata = {
   title: "About",
@@ -76,17 +77,7 @@ export default function AboutPage() {
                 Find {AUTHOR_NAME} online
               </h2>
               <div className="flex flex-wrap gap-3">
-                {SOCIAL_LINKS.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    target="_blank"
-                    rel="me noopener noreferrer"
-                    className="rounded-md border border-accent-pink px-4 py-2 text-xs font-semibold uppercase tracking-wide text-accent-pink transition-colors hover:bg-accent-pink hover:text-background"
-                  >
-                    {link.label}
-                  </a>
-                ))}
+                <SocialLinks/>
               </div>
             </div>
           </div>

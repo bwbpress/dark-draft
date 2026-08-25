@@ -85,7 +85,7 @@ export default async function BookPage({ params }: Props) {
               {book.status}
               {book.releaseDate ? ` · ${book.releaseDate}` : ""}
             </p>
-            <p className="max-w-xl text-base text-muted">{book.blurb}</p>
+            {/* <p className="max-w-xl text-base text-muted">{book.blurb}</p> */}
             <FormattedText text={book.description} className="max-w-xl text-sm text-muted" />
 
             <div className="flex flex-col gap-3 pt-4">

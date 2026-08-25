@@ -18,7 +18,7 @@ export function NewsletterCta() {
             Stay In The Loop
           </h2>
           <p className="text-sm text-muted">
-            New releases, exclusive stories, and behind-the-scenes updates.
+            New releases, behind-the-scenes updates and more!
           </p>
         </div>
       </div>

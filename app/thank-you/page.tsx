@@ -26,7 +26,7 @@ export default function Connect() {
                   <h2 className="font-display text-xl font-bold text-foreground">
                      Connect with me everywhere!
                   </h2>
-                  <Button href="/connect" variant="outline" size="md" className="hidden sm:inline-block min-w-40 text-center">
+                  <Button href="/connect" variant="outline" size="md" className="inline-block min-w-40 text-center">
                      Connect
                   </Button>
                   <SocialLinks/>

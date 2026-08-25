@@ -18,11 +18,11 @@ export default function Connect() {
                   background="gradient"
                   border="animated"
                   glow
-                  className="flex flex-col gap-6 items-center min-h-30 p-12"
+                  className="flex flex-col gap-6 items-center min-h-30 py-12 px-4 lg:px-12"
          >
-                  <h1 className="font-display text-xl font-bold text-foreground mb-8">Connect with me everywhere!</h1>
+                  <h1 className="font-display text-xl font-bold text-foreground mb-8 text-center">Connect with me everywhere!</h1>
                   {SOCIAL_LINKS.map((option) =>  (
-                     <Button href={option.href} variant="outline" size="md" className="hidden sm:inline-block min-w-60 text-center" key={option.label}>
+                     <Button href={option.href} variant="outline" size="md" className="inline-block min-w-60 text-center" key={option.label}>
                         {option.label}
                      </Button>
                   ))}

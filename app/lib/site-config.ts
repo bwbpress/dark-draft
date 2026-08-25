@@ -35,7 +35,7 @@ export const AUTHOR_BIO_LONG = [
 // point at. Replace with a real author headshot (min 800x800) when ready.
 export const AUTHOR_PHOTO = "/img/dystro-han-portrait.jpg";
 export const AUTHOR_PHOTO_ALT =
-  "Portrait of dystroh mm dark romance author, digitally drawn by the artist themselves.";
+  "dystroh mm dark romance author, illustrated by dystroh";
 
 // Default keywords for the homepage. Keep this short and specific — the
 // legacy <meta name="keywords"> tag is ignored by Google, but genre/trope
