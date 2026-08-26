@@ -6,7 +6,6 @@ import { buildPersonJsonLd, buildWebsiteJsonLd } from "./lib/structured-data";
 import {
   AUTHOR_NAME,
   AUTHOR_BIO_SHORT,
-  SEARCH_ENGINE_VERIFICATION,
   SITE_IS_LIVE,
   SITE_KEYWORDS,
   SITE_NAME,
@@ -72,12 +71,6 @@ export const metadata: Metadata = {
         index: false,
         follow: false,
       },
-  verification: {
-    google: SEARCH_ENGINE_VERIFICATION.google,
-    other: {
-      "msvalidate.01": SEARCH_ENGINE_VERIFICATION.bing,
-    },
-  },
 };
 
 export default function RootLayout({

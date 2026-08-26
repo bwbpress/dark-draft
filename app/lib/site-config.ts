@@ -2,11 +2,7 @@
 // Every value that still needs real content is prefixed SEO_PLACEHOLDER
 // so it can be found with a single search across the repo.
 
-// TODO(remove-before-launch): flip to `true` once the real domain is
-// connected and every SEO_PLACEHOLDER value above has been replaced.
-// Until then this keeps the whole site out of search results so
-// placeholder copy/links don't get indexed or cached by link-preview bots.
-export const SITE_IS_LIVE = false;
+export const SITE_IS_LIVE = true;
 
 export const SITE_NAME = "Dystroh";
 
@@ -67,7 +63,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 // Google Search Console / Bing Webmaster Tools verification codes.
 // https://search.google.com/search-console
-export const SEARCH_ENGINE_VERIFICATION = {
-  google: "SEO_PLACEHOLDER_GOOGLE_SITE_VERIFICATION",
-  bing: "SEO_PLACEHOLDER_BING_SITE_VERIFICATION",
-};
+// export const SEARCH_ENGINE_VERIFICATION = {
+//   google: "SEO_PLACEHOLDER_GOOGLE_SITE_VERIFICATION",
+//   bing: "SEO_PLACEHOLDER_BING_SITE_VERIFICATION",
+// };
