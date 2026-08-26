@@ -95,24 +95,26 @@ export default async function BookPage({ params }: Props) {
             {/* <p className="max-w-xl text-base text-muted">{book.blurb}</p> */}
             <FormattedText text={book.description} className="max-w-xl text-sm text-muted" />
 
-            <div className="flex flex-col gap-3 pt-4">
-              <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-foreground">
-                Get the book
-              </h2>
-              <div className="flex flex-wrap gap-3">
-                {book.retailerLinks.map((link) => (
-                  <a
-                    key={link.retailer}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-md border border-accent-pink px-4 py-2 text-xs font-semibold uppercase tracking-wide text-accent-pink transition-colors hover:bg-accent-pink hover:text-background"
-                  >
-                    {link.retailer}
-                  </a>
-                ))}
+            {book.retailerLinks.length > 0 && (
+              <div className="flex flex-col gap-3 pt-4">
+                <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-foreground">
+                  Get the book
+                </h2>
+                <div className="flex flex-wrap gap-3">
+                  {book.retailerLinks.map((link) => (
+                    <a
+                      key={link.retailer}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-md border border-accent-pink px-4 py-2 text-xs font-semibold uppercase tracking-wide text-accent-pink transition-colors hover:bg-accent-pink hover:text-background"
+                    >
+                      {link.retailer}
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </main>

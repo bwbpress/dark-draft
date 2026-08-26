@@ -62,25 +62,6 @@ export const SERIES: Series[] = [
   },
 ];
 
-function retailerLinksFor(bookSlug: string): RetailerLink[] {
-  return [
-    { retailer: "Amazon", url: `https://www.amazon.com/dp/SEO_PLACEHOLDER_ASIN_${bookSlug}` },
-    {
-      retailer: "Apple Books",
-      url: `https://books.apple.com/book/SEO_PLACEHOLDER_APPLE_ID_${bookSlug}`,
-    },
-    { retailer: "Kobo", url: `https://www.kobo.com/ebook/SEO_PLACEHOLDER_KOBO_SLUG_${bookSlug}` },
-    {
-      retailer: "Google Play",
-      url: `https://play.google.com/store/books/details?id=SEO_PLACEHOLDER_GOOGLE_PLAY_ID_${bookSlug}`,
-    },
-    {
-      retailer: "Barnes & Noble",
-      url: `https://www.barnesandnoble.com/w/SEO_PLACEHOLDER_BN_SLUG_${bookSlug}`,
-    },
-  ];
-}
-
 export const BOOKS: Book[] = [
   {
     slug: "static-bind-a-hack-and-harrow-story",
@@ -101,7 +82,9 @@ export const BOOKS: Book[] = [
       "Static Bind: idiots in love banter",
       "ex rivals with benefits",
     ],
-    retailerLinks: retailerLinksFor("static-bind-a-hack-and-harrow-story"),
+    retailerLinks: [
+      // { retailer: "Amazon", url: "SEO_PLACEHOLDER_RETAILER_URL_static-bind-a-hack-and-harrow-story_amazon" },
+    ],
     featured: true
   },
   {
@@ -122,7 +105,7 @@ export const BOOKS: Book[] = [
       "Static Bind: idiots in love banter",
       "ex rivals with benefits",
     ],
-    retailerLinks: retailerLinksFor("hack-and-harrow-book-1-breach"),
+    retailerLinks: [],
   },
 ];
 
