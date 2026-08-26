@@ -10,7 +10,7 @@ export const metadata: Metadata = {
    title: "Thanks for Requesting an ARC",
    description: "You're on the list! Here's where else you can find Dystro Han.",
    alternates: {
-      canonical: "/arc-thank-you",
+      canonical: "/arc-connect",
    },
    robots: {
       index: false,
