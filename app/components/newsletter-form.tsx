@@ -50,9 +50,9 @@ export function NewsletterForm({
       onSubmit={handleSubmit}
       className={className}
     >
-      <input type="hidden" name="meta_web_form_id" value="719956678" />
+      <input type="hidden" name="meta_web_form_id" value="968524833" />
       <input type="hidden" name="meta_split_id" value="" />
-      <input type="hidden" name="listname" value="awlist6972365" />
+      <input type="hidden" name="listname" value="awlist6972684" />
       <input
         type="hidden"
         name="redirect"
@@ -63,7 +63,11 @@ export function NewsletterForm({
         name="meta_redirect_onlist"
         value="https://www.aweber.com/thankyou-coi.htm?m=text"
       />
-      <input type="hidden" name="meta_adtracking" value="Newsletter_Signup" />
+      <input
+        type="hidden"
+        name="meta_adtracking"
+        value="dystroh.com_newsletter_signup"
+      />
       <input type="hidden" name="meta_message" value="1" />
       <input type="hidden" name="meta_required" value="email" />
       <input type="hidden" name="meta_tooltip" value="" />

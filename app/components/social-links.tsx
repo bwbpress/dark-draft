@@ -61,7 +61,7 @@ const SOCIAL_ICONS = {
   "TikTok": TikTokIcon,
   "Instagram": InstagramIcon,
   "Facebook": FacebookIcon,
-  // "Bluesky": BlueskyIcon
+  "Bluesky": BlueskyIcon
 }
 
 export function SocialLinks() {

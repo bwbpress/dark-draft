@@ -46,7 +46,7 @@ export const SITE_KEYWORDS = [
   "science fiction romance",
 ];
 
-export type SocialType = "Instagram" | "TikTok" | "Facebook" | "Patreon" | "Royal Road"; // | "Bluesky"
+export type SocialType = "Instagram" | "TikTok" | "Facebook" | "Patreon" | "Royal Road" | "Bluesky";
 export type SocialLink = {
   label: SocialType;
   href: string;
@@ -61,19 +61,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   { label: "Instagram", href: "https://www.instagram.com/dystro.han/", },
   { label: "Facebook", href: "https://facebook.com/dystroh.dreams" },
   { label: "TikTok", href: "https://www.tiktok.com/@dystroh" },
-  // { label: "Bluesky", href: "https://bsky.app/profile/SEO_PLACEHOLDER_BLUESKY_HANDLE" },
-  // {
-  //   label: "Goodreads",
-  //   href: "https://www.goodreads.com/author/show/SEO_PLACEHOLDER_GOODREADS_AUTHOR_ID",
-  // },
-  // {
-  //   label: "Amazon Author Page",
-  //   href: "https://www.amazon.com/author/SEO_PLACEHOLDER_AMAZON_AUTHOR_SLUG",
-  // },
-  // {
-  //   label: "BookBub",
-  //   href: "https://www.bookbub.com/authors/SEO_PLACEHOLDER_BOOKBUB_SLUG",
-  // },
+  { label: "Bluesky", href: "https://bsky.app/profile/dystroh.bsky.social" },
 ];
 
 
