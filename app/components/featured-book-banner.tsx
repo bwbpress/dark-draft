@@ -1,25 +1,31 @@
-type FeaturedBookBannerProps = {
-  eyebrow: string;
-  title: string;
-  blurb: string;
-  releaseDate: string;
-  seriesLabel: string;
-  status: string;
-  href: string;
-};
-
 import { Button } from "./button";
 import { GlowPanel } from "./glow-panel";
+import BookCover from "./bookCover";
+import type { Book, Series } from "../lib/books";
 
-export function FeaturedBookBanner({
-  eyebrow,
-  title,
-  blurb,
-  releaseDate,
-  seriesLabel,
-  status,
-  href,
-}: FeaturedBookBannerProps) {
+type FeaturedBookBannerProps = {
+  book: Book;
+  series?: Series;
+};
+
+export function FeaturedBookBanner({ book, series }: FeaturedBookBannerProps) {
+  const {
+    title,
+    blurb,
+    releaseDate,
+    status,
+    seriesPosition,
+    slug,
+    coverImage,
+    coverImageAlt,
+    coverIsPlaceholder,
+  } = book;
+  const eyebrow = status;
+  const href = `/books/${slug}`;
+  const seriesLabel = series
+    ? `${series.name}${seriesPosition && seriesPosition >= 1 ? ` Book ${seriesPosition}` : ""}`
+    : "Standalone Novella";
+
   return (
     <GlowPanel
       as="section"
@@ -28,7 +34,13 @@ export function FeaturedBookBanner({
       className="flex flex-col gap-6 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8"
     >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-        <div className="aspect-2/3 w-24 shrink-0 rounded-lg bg-linear-to-b from-accent-blue/40 to-surface" />
+        <div className="min-w-24 shrink-0">
+          <BookCover
+            image={coverImage}
+            alt={coverImageAlt}
+            isPlaceholder={coverIsPlaceholder}
+          />
+        </div>
         <div className="flex flex-col gap-2">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-pink">
             {eyebrow}

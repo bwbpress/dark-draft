@@ -39,7 +39,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: book.blurb,
       isbn: book.isbn13,
       releaseDate: book.releaseDate,
-      images: [{ url: book.coverImage, width: 1200, height: 630 }],
+    },
+    // No `images` here on purpose: leaving it unset makes Next.js fall back
+    // to `openGraph.images` (this route's generated opengraph-image), instead
+    // of inheriting the root layout's site-wide twitter image.
+    twitter: {
+      card: "summary_large_image",
+      title: `${book.title} | ${SITE_NAME}`,
+      description: book.blurb,
     },
   };
 }

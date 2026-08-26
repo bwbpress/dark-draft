@@ -9,7 +9,7 @@ export default function BookCover({ image, alt, animationDelay, isAnimated = fal
          border={isAnimated ? "animated" : "gradient"}
          animationDelay={animationDelay}
          glow
-         className={`aspect-2/3 w-full max-w-xs rounded-lg ${className}`}
+         className={`aspect-5/8 w-full max-w-xs rounded-lg ${className}`}
       >
          {isPlaceholder ? (
             <div className="absolute inset-0.5 z-10 flex items-center justify-center overflow-hidden rounded-[inherit]">

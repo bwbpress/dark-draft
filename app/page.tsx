@@ -22,15 +22,7 @@ export default function Home() {
         <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-16 px-6 sm:px-10 lg:px-8 xl:px-0">
           <HeroSection />
           {featuredBook && (
-            <FeaturedBookBanner
-              eyebrow={featuredBook.status}
-              title={featuredBook.title}
-              blurb={featuredBook.blurb}
-              releaseDate={featuredBook.releaseDate}
-              seriesLabel={featuredSeries ? `${featuredSeries.name} ${featuredBook.seriesPosition && featuredBook.seriesPosition >= 1 ? `Book ${featuredBook.seriesPosition}` : ""}` : "Standalone Novella"}
-              status={featuredBook.status}
-              href={`/books/${featuredBook.slug}`}
-            />
+            <FeaturedBookBanner book={featuredBook} series={featuredSeries} />
           )}
           <BookGrid />
           <AboutSection/>
