@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url,
       title: `${book.title} | ${SITE_NAME}`,
       description: book.blurb,
-      isbn: book.isbn13,
+      ...(book.isbn13 ? { isbn: book.isbn13 } : {}),
       releaseDate: book.releaseDate,
     },
     // No `images` here on purpose: leaving it unset makes Next.js fall back

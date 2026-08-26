@@ -1,3 +1,6 @@
+"use client";
+
+import { FormEvent, useState } from "react";
 import { Button } from "./button";
 
 type NewsletterFormProps = {
@@ -14,10 +17,37 @@ export function NewsletterForm({
   className = "",
   inputClassName = "",
 }: NewsletterFormProps) {
+  const [submitted, setSubmitted] = useState(false);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+
+    // AWeber's endpoint doesn't send CORS headers, so the response is opaque.
+    // Fire-and-forget the request and trust it went through rather than
+    // following the redirect it returns, so we can show our own thank-you state.
+    await fetch(form.action, {
+      method: "post",
+      body: new FormData(form),
+      mode: "no-cors",
+    }).catch(() => {});
+
+    setSubmitted(true);
+  }
+
+  if (submitted) {
+    return (
+      <p className={`text-sm text-foreground ${className}`}>
+        Thanks for signing up! Please check your inbox to confirm.
+      </p>
+    );
+  }
+
   return (
     <form
       method="post"
       action="https://www.aweber.com/scripts/addlead.pl"
+      onSubmit={handleSubmit}
       className={className}
     >
       <input type="hidden" name="meta_web_form_id" value="719956678" />

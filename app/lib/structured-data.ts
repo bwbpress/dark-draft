@@ -47,7 +47,7 @@ export function buildBookJsonLd(book: Book, series: Series | undefined) {
     url: absoluteUrl(`/books/${book.slug}`),
     image: absoluteUrl(book.coverImage),
     description: toPlainText(book.description),
-    isbn: book.isbn13,
+    ...(book.isbn13 ? { isbn: book.isbn13 } : {}),
     inLanguage: "en",
     author: {
       "@type": "Person",
