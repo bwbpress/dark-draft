@@ -6,7 +6,7 @@ export const SITE_IS_LIVE = true;
 
 export const SITE_NAME = "Dystroh";
 
-export const SITE_TAGLINE = "Dystroh Dreams";
+export const SITE_TAGLINE = "Dystro Han";
 
 // Used as `metadataBase` for every relative URL in metadata (canonical,
 // Open Graph images, sitemap, etc). Swap for the real production domain.

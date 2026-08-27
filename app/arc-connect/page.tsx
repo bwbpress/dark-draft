@@ -7,8 +7,8 @@ import { GlowPanel } from "../components/glow-panel"
 import { NewsletterForm } from "../components/newsletter-form"
 
 export const metadata: Metadata = {
-   title: "Thanks for Requesting an ARC",
-   description: "You're on the list! Here's where else you can find Dystro Han.",
+   title: "Thank you for being an ARC reader",
+   description: "Thank you for reading! Here's where else you can find Dystro Han.",
    alternates: {
       canonical: "/arc-connect",
    },
