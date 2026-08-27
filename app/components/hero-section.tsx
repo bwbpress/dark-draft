@@ -14,7 +14,8 @@ export function HeroSection() {
         </p>
         <SocialLinks />
         <p className="max-w-2xl text-base text-muted rounded-lg bg-background/60 p-3 backdrop-blur-sm">
-          Currently working on <strong>Hack & Harrow</strong>, a sprawling dark MM action romance set in dystopian cyberpunk Boston, told across eight full-length novels. Coming to all major ebook and audiobook retailers in Q2 2027. Early serial release on Royal Road - subscribe and connect for updates!
+          Hello and welcome! I&apos;m currently working on <strong>Hack & Harrow</strong>, a sprawling dark MM action romance set in dystopian cyberpunk Boston, told across eight full-length novels. Coming to all major ebook and audiobook retailers in Q2 2027. 
+          Early serial release on Royal Road TBA - subscribe and connect for updates!
         </p>
         {/* <div className="flex flex-wrap gap-4">
           <Button href="/books">Explore Books</Button>
