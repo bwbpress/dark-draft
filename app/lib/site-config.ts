@@ -17,11 +17,13 @@ export const AUTHOR_NAME = "Dystro Han";
 // ~150-160 characters, used as the default meta description and in the
 // Person JSON-LD `description` field.
 export const AUTHOR_BIO_SHORT =
-  "Dystro Han (they/he) aka dystroh is the indie queer romance author of the upcoming epic cyberpunk MM dark romance series, Hack & Harrow.";
+  "Dystro Han aka dystroh (he/they) is the indie queer romance author and illustrator of the upcoming epic cyberpunk MM dark romance series, Hack & Harrow.";
 
 // Longer bio for the /about page. Split into paragraphs.
 export const AUTHOR_BIO_LONG = [
-  "Dystroh spent over a decade burning out in tech before deciding to return to his sci-fi creative writing roots, but with a spicy romantic twist - because life is too short not to have all the smut and HEAs our hearts desire. Now he spends every waking moment dreaming up epic multi-part romances set in expansive worlds. He lives in Boston with his husband and their two dogs. "
+  "Dystroh spent over a decade burning out in the tech industry before returning to his sci-fi creative writing roots, with a spicy romantic twist - because life is too short not to have all the smut and HEAs our hearts desire. Now he spends every waking moment dreaming up epic multi-part romances set in expansive worlds.", 
+  "In the spare time he doesn't have, he spends too many hours trying to relearn his decade-buried art skills, in an attempt to do his own character and cover illustrations.",
+  "He lives in Boston with his husband and their two dogs. "
 ];
 
 // Reuse an existing site asset as a stand-in so the build has a real file to

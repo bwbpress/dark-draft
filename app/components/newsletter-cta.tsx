@@ -15,10 +15,10 @@ export function NewsletterCta() {
         </span>
         <div>
           <h2 className="font-display text-xl font-bold text-foreground">
-            Join my Newsletter!
+            Join my Newsletter
           </h2>
           <p className="text-sm text-muted">
-            Stay in the loop with new releases, behind-the-scenes updates and more!
+            Stay in the loop with behind-the-scenes updates, release announcements, bonus content and more.
           </p>
         </div>
       </div>

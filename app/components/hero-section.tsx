@@ -1,4 +1,3 @@
-import { Button } from "./button";
 import { GlowPanel } from "./glow-panel";
 import { NewsletterForm } from "./newsletter-form";
 import { SocialLinks } from "./social-links";
@@ -24,17 +23,17 @@ export function HeroSection() {
 
       <GlowPanel id="newsletter" glow border="animated" className="flex flex-col gap-4 p-6 h-min">
         <h2 className="font-display text-xl font-bold text-foreground">
-          Join my Newsletter!
+          Join my Newsletter
         </h2>
         <p className="text-sm text-muted">
-          Stay in the loop with new releases, behind-the-scenes updates and more!
+          Stay in the loop with behind-the-scenes updates, release announcements, bonus content and more.
         </p>
         <NewsletterForm
           buttonLabel="Sign Up"
           className="flex flex-col gap-4"
         />
         <p className="text-center text-xs text-muted">
-          No spam. Unsubscribe anytime.
+          General Newsletter goes out once or twice a month. Unsubscribe anytime.
         </p>
       </GlowPanel>
     </section>

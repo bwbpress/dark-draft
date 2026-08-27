@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { BookCard } from "./book-card";
 import { getAllBooks, getSeriesBySlug } from "../lib/books";
-import { Button } from "./button";
 
 export function BookGrid() {
   const books = getAllBooks();

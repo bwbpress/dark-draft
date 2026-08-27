@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import BackgroundImageWithOverlay from "../components/BackgroundImageWithOverlay"
 import { SiteHeader } from "../components/site-header"
 import { SiteFooter } from "../components/site-footer"
-import { SocialLinks } from "../components/social-links"
 import { Button } from "../components/button"
 import { GlowPanel } from "../components/glow-panel"
 

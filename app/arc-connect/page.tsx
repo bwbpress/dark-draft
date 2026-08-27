@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import BackgroundImageWithOverlay from "../components/BackgroundImageWithOverlay"
 import { SiteHeader } from "../components/site-header"
 import { SiteFooter } from "../components/site-footer"
-import { SocialLinks } from "../components/social-links"
 import { Button } from "../components/button"
 import { GlowPanel } from "../components/glow-panel"
 import { NewsletterForm } from "../components/newsletter-form"
@@ -32,7 +31,7 @@ const ARC_CONTENT:ARC_LINK[] = [
       id: "goodreads",
       href: "https://google.com",
       label:"GoodReads",
-      textBody: "Thank you from the bottom of my heart for ARC reading Static Bind. If you enjoyed this story, a rating and a review would go a long way - find the Goodreads page here:",
+      textBody: "Thank you from the bottom of my heart for ARC reading Static Bind. If you enjoyed this story, a rating and a review would go a long way. Find the Goodreads page here:",
       disabled:true,
       disabledText:"(GOODREADS PAGE COMING SOON)"
    },
@@ -40,13 +39,13 @@ const ARC_CONTENT:ARC_LINK[] = [
       id: "newsletter",
       href: "https://forms.gle/LFipAdDC6xvgB4Kv5",
       label:"Sign Up",
-      textBody: "Sign up for my newsletter below to stay updated on all things Hack & Harrow, including updates on the series launch in Q2 2027 and the upcoming audiobook Advance Listener Copy (ALC), narrated by an extremely talented guy who would like to remain anonymous for now - give him some hype and love to encourage him!"
+      textBody: "Sign up for my newsletter below to stay updated on all things Hack & Harrow, including updates on the series launch in Q2 2027 and the upcoming audiobook Advance Listener Copy (ALC). Static Bind is narrated by an extremely talented voice actor who would like to remain anonymous for now, but let's give him some hype! I can't wait for everyone to hear his amazing narration."
    },
    {
       id: "discord",
       href: "http://dsc.gg/staticbindarc",
       label:"Join The Discord",
-      textBody: "Join my Discord server with the button below to receive an exclusive Launch ARC role, engage with me and my (hopefully growing!) community, and give input on the final cover at progress - the finishing touches and final background is still WIP leading up to Static Bind's launch. Come in and be a part of the process!"
+      textBody: "Join my Discord server with the button below to receive an exclusive Launch ARC role, engage with me and my (hopefully growing!) community, and give input on the final cover art progress. The finishing touches and final background will still be WIP leading up to Static Bind's full launch. Come chat and be a part of the process!"
    },
 ]
 
@@ -69,7 +68,7 @@ export default function ArcThankYou() {
                      Thanks for reading!
                   </h1>
                   <h2 className="font-display text-xl font-bold text-foreground">
-                     Come connect with me!
+                     Below are all the ways you can engage with Hack & Harrow.
                   </h2>
                   <div className="flex flex-col gap-12 max-w-3xl mt-8 text-muted">
                      {ARC_CONTENT.map((option) => (
@@ -91,11 +90,11 @@ export default function ArcThankYou() {
                      ))}
                      <div key={"Patreon"} className="flex flex-col gap-4 text-center items-center border-t border-accent-purple pt-12 ">
                         <p>Finally, if you really enjoyed reading about Dan and Tiernan and would like to give them a little extra love, you can support me in bringing their full story to life by joining my patreon below.</p><br/><br/>
-                        <p className="pb-4">Summary of support tiers that will be active leading up to the series launch below. All pre-launch Discord roles are permanent - grab yours today!</p>
+                        <p className="pb-4">Find the summary of support tiers that will be active leading up to the series launch below. All pre-launch Discord roles are permanent - grab yours today!</p>
                         <ul className="text-start list-disc pl-16 text-sm">
-                           <li className='pb-3'><strong>Pre-Launch Supporter ($3)</strong>: Exclusive access to side stories, character sketches, behind the scenes processes, and permanent discord role.</li>
-                           <li className='pb-3'><strong>Early Audiobook Funder ($8)</strong>:  Everything that Pre-Launch Supporter gets you, plus contribute to the series audiobook fund. Receive the audiobook version to my upcoming second Hack & Harrow short, when it becomes available.</li>
-                           <li><strong>Primordial Super-Fan ($20)</strong>: For those who really want to show extra support - which I appreciate FULLY! Receive everything that Early Audiobook Funder gets you, plus a special permanent Discord role and private chat channel.</li>
+                           <li className='pb-3'><strong>Pre-Launch Supporter ($3)</strong>: Exclusive access to side stories, character sketches, behind the scenes processes. Receive a permanent discord role denoting you as an early supporter.</li>
+                           <li className='pb-3'><strong>Early Audiobook Funder ($8)</strong>:  Everything that Pre-Launch Supporter gets you, plus contribute to the series audiobook fund. Receive the audiobook version to my upcoming second Hack & Harrow short, when it becomes available. Plus, get a permanent discord role. </li>
+                           <li><strong>Primordial Super-Fan ($20)</strong>: For those who really want to show extra support - which I appreciate FULLY! Receive everything that Early Audiobook Funder gets you, plus a special permanent super-shiny Discord role and private chat channel.</li>
                         </ul>
                         <Button href={"https://www.patreon.com/c/dystrohdreams"} variant="outline" size="md" className="inline-block min-w-60 text-center my-4">
                            Check out my Patreon
