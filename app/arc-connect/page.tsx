@@ -62,17 +62,17 @@ export default function ArcThankYou() {
                   background="gradient"
                   border="animated"
                   glow
-                  className="flex flex-col gap-6 items-center min-h-30 p-12 my-6"
+                  className="flex flex-col gap-6 items-center min-h-30 p-8 lg:p-12 my-6"
                >
-                  <h1 className="text-center bg-linear-to-r from-accent-pink to-accent-blue bg-clip-text font-display text-5xl font-semibold uppercase tracking-wide text-transparent sm:text-6xl mb-4">
+                  <h1 className="text-center bg-linear-to-r from-accent-pink to-accent-blue bg-clip-text font-display text-4xl md:text-5xl font-semibold uppercase tracking-wide text-transparent sm:text-6xl mb-4">
                      Thanks for reading!
                   </h1>
-                  <h2 className="font-display text-xl font-bold text-foreground">
+                  <h2 className="font-display text-base md:text-xl font-bold text-foreground text-center">
                      Below are all the ways you can engage with Hack & Harrow.
                   </h2>
                   <div className="flex flex-col gap-12 max-w-3xl mt-8 text-muted">
                      {ARC_CONTENT.map((option) => (
-                        <div key={option.label} className="flex flex-col gap-6 text-center items-center border-accent-purple border-t pt-12">
+                        <div key={option.label} className="flex flex-col gap-6 items-center border-accent-purple border-t pt-12">
                            <p>{option.textBody}</p>
                            {option.id === "newsletter" && (
                               <NewsletterForm
@@ -88,10 +88,10 @@ export default function ArcThankYou() {
                            )}
                         </div>
                      ))}
-                     <div key={"Patreon"} className="flex flex-col gap-4 text-center items-center border-t border-accent-purple pt-12 ">
+                     <div key={"Patreon"} className="flex flex-col gap-4 items-center border-t border-accent-purple pt-12 ">
                         <p>Finally, if you really enjoyed reading about Dan and Tiernan and would like to give them a little extra love, you can support me in bringing their full story to life by joining my patreon below.</p><br/><br/>
                         <p className="pb-4">Find the summary of support tiers that will be active leading up to the series launch below. All pre-launch Discord roles are permanent - grab yours today!</p>
-                        <ul className="text-start list-disc pl-16 text-sm">
+                        <ul className="text-start list-disc pl-4 lg:pl-16 text-sm">
                            <li className='pb-3'><strong>Pre-Launch Supporter ($3)</strong>: Exclusive access to side stories, character sketches, behind the scenes processes. Receive a permanent discord role denoting you as an early supporter.</li>
                            <li className='pb-3'><strong>Early Audiobook Funder ($8)</strong>:  Everything that Pre-Launch Supporter gets you, plus contribute to the series audiobook fund. Receive the audiobook version to my upcoming second Hack & Harrow short, when it becomes available. Plus, get a permanent discord role. </li>
                            <li><strong>Primordial Super-Fan ($20)</strong>: For those who really want to show extra support - which I appreciate FULLY! Receive everything that Early Audiobook Funder gets you, plus a special permanent super-shiny Discord role and private chat channel.</li>
