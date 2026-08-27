@@ -14,11 +14,13 @@ type CommonProps = {
 type ButtonAsButton = CommonProps &
   Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof CommonProps> & {
     href?: undefined;
+    target?: undefined;
   };
 
 type ButtonAsLink = CommonProps &
   Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof CommonProps> & {
     href: string;
+    target?: string;
   };
 
 type ButtonProps = ButtonAsButton | ButtonAsLink;
@@ -43,6 +45,7 @@ export function Button({
   className = "",
   href,
   disabled = false,
+  target="_self",
   ...props
 }: ButtonProps) {
   const classes = `rounded-md font-semibold uppercase tracking-wide hover:cursor-pointer duration-300
@@ -56,6 +59,7 @@ export function Button({
         aria-disabled={disabled}
         tabIndex={disabled ? -1 : undefined}
         className={classes}
+        target={target}
         {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}
       />
     );

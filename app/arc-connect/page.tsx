@@ -18,6 +18,24 @@ export const metadata: Metadata = {
    },
 };
 
+const ARC_CONTENT = [
+   {
+      href: "https://google.com",
+      label:"Bloop",
+      textBody: "Beep Boop filler text and stuff!! Beep Boop filler text and stuff!!Beep Bv Beep Boop filler text and stuff!!Beep Boop filler text and stuff!! Beep Boop filler text and stuff!!oop filler text and stuff!!Beep Boop filler text and stuff!! Beep Boop filler text and stuff!!"
+   },
+   {
+      href: "https://google.com",
+      label:"Bloop",
+      textBody: "Beep Boop filler text and stuff!! Beep Boop filler text and stuff!!Beep Bv Beep Boop filler text and stuff!!Beep Boop filler text and stuff!! Beep Boop filler text and stuff!!oop filler text and stuff!!Beep Boop filler text and stuff!! Beep Boop filler text and stuff!!"
+   },
+   {
+      href: "https://google.com",
+      label:"Bloop",
+      textBody: "Beep Boop filler text and stuff!! Beep Boop filler text and stuff!!Beep Bv Beep Boop filler text and stuff!!Beep Boop filler text and stuff!! Beep Boop filler text and stuff!!oop filler text and stuff!!Beep Boop filler text and stuff!! Beep Boop filler text and stuff!!"
+   },
+]
+
 export default function ArcThankYou() {
    return (
       <div className="relative flex min-h-full flex-1 flex-col bg-background">
@@ -31,7 +49,7 @@ export default function ArcThankYou() {
                   background="gradient"
                   border="animated"
                   glow
-                  className="flex flex-col gap-6 items-center min-h-30 p-12"
+                  className="flex flex-col gap-6 items-center min-h-30 p-12 my-6"
                >
                   <h1 className="bg-linear-to-r from-accent-pink to-accent-blue bg-clip-text font-display text-5xl font-semibold uppercase tracking-wide text-transparent sm:text-6xl mb-8">
                      Thank you for joining!
@@ -39,9 +57,16 @@ export default function ArcThankYou() {
                   <h2 className="font-display text-xl font-bold text-foreground">
                      Connect with me everywhere!
                   </h2>
-                  <Button href="/connect" variant="outline" size="md" className="inline-block min-w-40 text-center">
-                     Connect
-                  </Button>
+                  <div className="flex flex-col gap-8 max-w-2xl">
+                     {ARC_CONTENT.map((option) => (
+                        <div key={option.label} className="flex flex-col gap-4 text-center items-center">
+                           <p>{option.textBody}</p>
+                           <Button href={option.href} variant="outline" size="md" className="inline-block min-w-60 text-center" key={option.label}>
+                              {option.label}
+                           </Button>
+                        </div>
+                     ))}
+                  </div>
                   <SocialLinks/>
                </GlowPanel>
             </main>

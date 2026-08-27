@@ -11,7 +11,7 @@ export function HeroSection() {
           Dystro Han
         </h1>
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-muted">
-          Dystrohpian Dreams: Home of Hack & Harrow
+          Queer epic romance author currently writing Hack & Harrow, a dark MM action romance releasing in Q2 2027
         </p>
         <SocialLinks />
         <div className="flex flex-wrap gap-4">
@@ -24,13 +24,13 @@ export function HeroSection() {
           Free Short Story
         </p>
         <h2 className="font-display text-xl font-bold text-foreground">
-          Get your Advance Reader Copy!
+          Join my Newsletter!
         </h2>
         <p className="text-sm text-muted">
-          Join my newsletter and get an exclusive access to the ARC of Static Bind, the first Hack & Harrow short story.
+          Stay in the loop with new releases, behind-the-scenes updates and more!
         </p>
         <NewsletterForm
-          buttonLabel="Get My Free Story"
+          buttonLabel="Sign Up"
           className="flex flex-col gap-4"
         />
         <p className="text-center text-xs text-muted">

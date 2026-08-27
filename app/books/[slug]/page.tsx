@@ -9,6 +9,7 @@ import { buildBookJsonLd, buildBreadcrumbJsonLd } from "../../lib/structured-dat
 import { SITE_NAME } from "../../lib/site-config";
 import BookCover from "@/app/components/bookCover";
 import { FormattedText } from "../../components/formatted-text";
+import { Button } from "@/app/components/button";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -114,6 +115,17 @@ export default async function BookPage({ params }: Props) {
                   ))}
                 </div>
               </div>
+            )}
+
+            {book.arcLink && (
+              <Button
+                href={book.arcLink}
+                target="_blank"
+                variant="outline"
+                className="shrink-0 self-start mt-8"
+              >
+                Apply to be an ARC Reader
+              </Button>
             )}
           </div>
         </div>

@@ -6,7 +6,7 @@ export const SITE_IS_LIVE = true;
 
 export const SITE_NAME = "Dystroh";
 
-export const SITE_TAGLINE = "Dystrohpian Dreams: Home of Hack & Harrow";
+export const SITE_TAGLINE = "Dystroh Dreams";
 
 // Used as `metadataBase` for every relative URL in metadata (canonical,
 // Open Graph images, sitemap, etc). Swap for the real production domain.
@@ -52,11 +52,11 @@ export type SocialLink = {
 // so Google can tie them together as the same entity (see Person JSON-LD
 // `sameAs` in app/lib/structured-data.ts).
 export const SOCIAL_LINKS: SocialLink[] = [
+  { label: "TikTok", href: "https://www.tiktok.com/@dystroh" },
   { label: "Patreon", href: "https://www.patreon.com/c/dystrohdreams" },
   { label: "Royal Road", href: "https://www.royalroad.com/profile/987576" },
-  { label: "Instagram", href: "https://www.instagram.com/dystro.han/", },
   { label: "Facebook", href: "https://facebook.com/dystroh.dreams" },
-  { label: "TikTok", href: "https://www.tiktok.com/@dystroh" },
+  { label: "Instagram", href: "https://www.instagram.com/dystro.han/", },
   { label: "Bluesky", href: "https://bsky.app/profile/dystroh.bsky.social" },
 ];
 

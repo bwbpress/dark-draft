@@ -56,19 +56,20 @@ function BlueskyIcon(props: SVGProps<SVGSVGElement>) {
 }
 
 const SOCIAL_ICONS = {
-  "Patreon": PatreonIcon,
-  "Royal Road": RoyalRoadIcon,
-  "TikTok": TikTokIcon,
-  "Instagram": InstagramIcon,
-  "Facebook": FacebookIcon,
-  "Bluesky": BlueskyIcon
+  "TikTok": { icon:TikTokIcon, style: ""},
+  "Patreon": { icon:PatreonIcon, style: ""},
+  "Royal Road": { icon:RoyalRoadIcon, style: ""},
+  "Facebook": { icon:FacebookIcon, style: "pb-1"},
+  "Instagram": { icon:InstagramIcon, style: ""},
+  "Bluesky": { icon:BlueskyIcon, style: ""}
 }
 
 export function SocialLinks() {
   return (
     <div className="flex items-center gap-4" aria-label="Social Links">
       {SOCIAL_LINKS.map(({ label, href }) => {
-        const Icon = SOCIAL_ICONS[label] || <p></p>;
+        const social = SOCIAL_ICONS[label];
+        const Icon = social.icon || <p></p>;
         return (
           <a
             key={label}
@@ -76,7 +77,7 @@ export function SocialLinks() {
             aria-label={label}
             target="_blank"
             rel="me noreferrer"
-            className="text-muted transition-colors hover:text-accent-pink"
+            className={`text-muted transition-colors hover:text-accent-pink ${social.style}`}
           >
             <Icon className="h-7 w-7" />
           </a>

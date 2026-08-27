@@ -51,6 +51,7 @@ export type Book = {
   retailerLinks: RetailerLink[];
   /** Shown in the homepage's FeaturedBookBanner. Exactly one book should be featured. */
   featured?: boolean;
+  arcLink?: string;
 };
 
 export const SERIES: Series[] = [
@@ -85,7 +86,8 @@ export const BOOKS: Book[] = [
     retailerLinks: [
       // { retailer: "Amazon", url: "SEO_PLACEHOLDER_RETAILER_URL_static-bind-a-hack-and-harrow-story_amazon" },
     ],
-    featured: true
+    featured: true,
+    arcLink: "https://forms.gle/LFipAdDC6xvgB4Kv5"
   },
   {
     slug: "hack-and-harrow-book-1-breach",

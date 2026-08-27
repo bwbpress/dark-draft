@@ -27,7 +27,7 @@ export default function Connect() {
          <BackgroundImageWithOverlay image="/img/Dystro-Han-BG.jpg" className="mt-40"/>
          <div className="relative flex flex-1 flex-col">
             <SiteHeader />
-            <main className="mx-auto flex w-full min-h-80 max-w-2xl flex-1 flex-col items-center justify-center gap-16 px-6 sm:px-10 lg:px-0">
+            <main className="mx-auto flex w-full min-h-80 max-w-2xl flex-1 flex-col items-center justify-center gap-16 px-6 sm:px-10 lg:px-0 my-4 lg:my-8">
                <GlowPanel
                   as="section"
                   id="connect"

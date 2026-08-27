@@ -15,15 +15,15 @@ export function NewsletterCta() {
         </span>
         <div>
           <h2 className="font-display text-xl font-bold text-foreground">
-            Stay In The Loop
+            Join my Newsletter!
           </h2>
           <p className="text-sm text-muted">
-            New releases, behind-the-scenes updates and more!
+            Stay in the loop with new releases, behind-the-scenes updates and more!
           </p>
         </div>
       </div>
       <NewsletterForm
-        buttonLabel="Join The List"
+        buttonLabel="Sign up"
         className="flex flex-col gap-3 sm:flex-row sm:items-center"
         inputClassName="sm:w-64"
       />

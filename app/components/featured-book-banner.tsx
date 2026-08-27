@@ -19,6 +19,7 @@ export function FeaturedBookBanner({ book, series }: FeaturedBookBannerProps) {
     coverImage,
     coverImageAlt,
     coverIsPlaceholder,
+    arcLink
   } = book;
   const eyebrow = status;
   const href = `/books/${slug}`;
@@ -56,13 +57,25 @@ export function FeaturedBookBanner({ book, series }: FeaturedBookBannerProps) {
           </div>
         </div>
       </div>
-      <Button
-        href={href}
-        variant="outline"
-        className="shrink-0 self-start sm:self-center"
-      >
-        View Details
-      </Button>
+      <div className="flex flex-col gap-8">
+        <Button
+          href={href}
+          variant="outline"
+          className="shrink-0 self-start sm:self-end"
+        >
+          View Details
+        </Button>
+        {arcLink &&
+          <Button
+            href={arcLink}
+            target="_blank"
+            variant="outline"
+            className="shrink-0 self-start sm:self-end"
+          >
+            Apply to be an ARC Reader
+          </Button>
+        }
+      </div>
     </GlowPanel>
   );
 }
