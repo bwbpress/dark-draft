@@ -11,18 +11,18 @@ export function HeroSection() {
           Dystro Han
         </h1>
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-muted">
-          Queer epic romance author currently writing Hack & Harrow, a dark MM action romance releasing in Q2 2027
+          AN INDIE AUTHOR WRITING QUEER EPIC ROMANCE
         </p>
         <SocialLinks />
-        <div className="flex flex-wrap gap-4">
+        <p className="max-w-2xl text-base text-muted rounded-lg bg-background/60 p-3 backdrop-blur-sm">
+          Currently working on <strong>Hack & Harrow</strong>, a sprawling dark MM action romance set in dystopian cyberpunk Boston, told across eight full-length novels. Coming to all major ebook and audiobook retailers in Q2 2027. Early serial release on Royal Road - subscribe and connect for updates!
+        </p>
+        {/* <div className="flex flex-wrap gap-4">
           <Button href="/books">Explore Books</Button>
-        </div>
+        </div> */}
       </div>
 
-      <GlowPanel id="newsletter" glow border="animated" className="flex flex-col gap-4 p-6">
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-blue">
-          Free Short Story
-        </p>
+      <GlowPanel id="newsletter" glow border="animated" className="flex flex-col gap-4 p-6 h-min">
         <h2 className="font-display text-xl font-bold text-foreground">
           Join my Newsletter!
         </h2>
@@ -34,7 +34,7 @@ export function HeroSection() {
           className="flex flex-col gap-4"
         />
         <p className="text-center text-xs text-muted">
-          No spam. Unsubscribe anytime!
+          No spam. Unsubscribe anytime.
         </p>
       </GlowPanel>
     </section>

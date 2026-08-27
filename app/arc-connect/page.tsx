@@ -5,6 +5,7 @@ import { SiteFooter } from "../components/site-footer"
 import { SocialLinks } from "../components/social-links"
 import { Button } from "../components/button"
 import { GlowPanel } from "../components/glow-panel"
+import { NewsletterForm } from "../components/newsletter-form"
 
 export const metadata: Metadata = {
    title: "Thanks for Requesting an ARC",
@@ -18,21 +19,34 @@ export const metadata: Metadata = {
    },
 };
 
-const ARC_CONTENT = [
+type ARC_LINK = {
+   id: string;
+   href:string;
+   label:string;
+   textBody:string;
+   disabled?:boolean;
+   disabledText?:string;
+}
+const ARC_CONTENT:ARC_LINK[] = [
    {
+      id: "goodreads",
       href: "https://google.com",
-      label:"Bloop",
-      textBody: "Beep Boop filler text and stuff!! Beep Boop filler text and stuff!!Beep Bv Beep Boop filler text and stuff!!Beep Boop filler text and stuff!! Beep Boop filler text and stuff!!oop filler text and stuff!!Beep Boop filler text and stuff!! Beep Boop filler text and stuff!!"
+      label:"GoodReads",
+      textBody: "Thank you from the bottom of my heart for ARC reading Static Bind. If you enjoyed this story, a rating and a review would go a long way - find the Goodreads page here:",
+      disabled:true,
+      disabledText:"(GOODREADS PAGE COMING SOON)"
    },
    {
-      href: "https://google.com",
-      label:"Bloop",
-      textBody: "Beep Boop filler text and stuff!! Beep Boop filler text and stuff!!Beep Bv Beep Boop filler text and stuff!!Beep Boop filler text and stuff!! Beep Boop filler text and stuff!!oop filler text and stuff!!Beep Boop filler text and stuff!! Beep Boop filler text and stuff!!"
+      id: "newsletter",
+      href: "https://forms.gle/LFipAdDC6xvgB4Kv5",
+      label:"Sign Up",
+      textBody: "Sign up for my newsletter below to stay updated on all things Hack & Harrow, including updates on the series launch in Q2 2027 and the upcoming audiobook Advance Listener Copy (ALC), narrated by an extremely talented guy who would like to remain anonymous for now - give him some hype and love to encourage him!"
    },
    {
-      href: "https://google.com",
-      label:"Bloop",
-      textBody: "Beep Boop filler text and stuff!! Beep Boop filler text and stuff!!Beep Bv Beep Boop filler text and stuff!!Beep Boop filler text and stuff!! Beep Boop filler text and stuff!!oop filler text and stuff!!Beep Boop filler text and stuff!! Beep Boop filler text and stuff!!"
+      id: "discord",
+      href: "http://dsc.gg/staticbindarc",
+      label:"Join The Discord",
+      textBody: "Join my Discord server with the button below to receive an exclusive Launch ARC role, engage with me and my (hopefully growing!) community, and give input on the final cover at progress - the finishing touches and final background is still WIP leading up to Static Bind's launch. Come in and be a part of the process!"
    },
 ]
 
@@ -51,23 +65,43 @@ export default function ArcThankYou() {
                   glow
                   className="flex flex-col gap-6 items-center min-h-30 p-12 my-6"
                >
-                  <h1 className="bg-linear-to-r from-accent-pink to-accent-blue bg-clip-text font-display text-5xl font-semibold uppercase tracking-wide text-transparent sm:text-6xl mb-8">
-                     Thank you for joining!
+                  <h1 className="text-center bg-linear-to-r from-accent-pink to-accent-blue bg-clip-text font-display text-5xl font-semibold uppercase tracking-wide text-transparent sm:text-6xl mb-4">
+                     Thanks for reading!
                   </h1>
                   <h2 className="font-display text-xl font-bold text-foreground">
-                     Connect with me everywhere!
+                     Come connect with me!
                   </h2>
-                  <div className="flex flex-col gap-8 max-w-2xl">
+                  <div className="flex flex-col gap-12 max-w-3xl mt-8 text-muted">
                      {ARC_CONTENT.map((option) => (
-                        <div key={option.label} className="flex flex-col gap-4 text-center items-center">
+                        <div key={option.label} className="flex flex-col gap-6 text-center items-center border-accent-purple border-t pt-12">
                            <p>{option.textBody}</p>
-                           <Button href={option.href} variant="outline" size="md" className="inline-block min-w-60 text-center" key={option.label}>
-                              {option.label}
-                           </Button>
+                           {option.id === "newsletter" && (
+                              <NewsletterForm
+                                 buttonLabel="Sign up"
+                                 className="flex flex-col gap-3 sm:flex-row sm:items-center"
+                                 inputClassName="sm:w-64"
+                              />
+                           )}
+                           {option.id !== "newsletter" && (
+                              <Button href={option.href} variant="outline" disabled={option.disabled} size="md" className="inline-block min-w-60 text-center">
+                                 {option.disabled ? option.disabledText : option.label}
+                              </Button>
+                           )}
                         </div>
                      ))}
+                     <div key={"Patreon"} className="flex flex-col gap-4 text-center items-center border-t border-accent-purple pt-12 ">
+                        <p>Finally, if you really enjoyed reading about Dan and Tiernan and would like to give them a little extra love, you can support me in bringing their full story to life by joining my patreon below.</p><br/><br/>
+                        <p className="pb-4">Summary of support tiers that will be active leading up to the series launch below. All pre-launch Discord roles are permanent - grab yours today!</p>
+                        <ul className="text-start list-disc pl-16 text-sm">
+                           <li className='pb-3'><strong>Pre-Launch Supporter ($3)</strong>: Exclusive access to side stories, character sketches, behind the scenes processes, and permanent discord role.</li>
+                           <li className='pb-3'><strong>Early Audiobook Funder ($8)</strong>:  Everything that Pre-Launch Supporter gets you, plus contribute to the series audiobook fund. Receive the audiobook version to my upcoming second Hack & Harrow short, when it becomes available.</li>
+                           <li><strong>Primordial Super-Fan ($20)</strong>: For those who really want to show extra support - which I appreciate FULLY! Receive everything that Early Audiobook Funder gets you, plus a special permanent Discord role and private chat channel.</li>
+                        </ul>
+                        <Button href={"https://www.patreon.com/c/dystrohdreams"} variant="outline" size="md" className="inline-block min-w-60 text-center my-4">
+                           Check out my Patreon
+                        </Button>
+                     </div>
                   </div>
-                  <SocialLinks/>
                </GlowPanel>
             </main>
             <SiteFooter />

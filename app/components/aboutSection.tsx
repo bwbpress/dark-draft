@@ -22,8 +22,9 @@ export default function AboutSection() {
                className="object-cover"
             />
          </div>
-         <div className="lg:max-w-1/2 flex flex-col gap-4 py-4">
-            <p className="text-sm text-white">{AUTHOR_BIO_SHORT}</p>
+         <div className="lg:max-w-1/2 flex flex-col gap-4">
+            <h2 className="text-xl font-bold text-foreground font-display">Author Bio</h2>
+            <p className="text-sm text-muted">{AUTHOR_BIO_SHORT}</p>
             <Link
                href="/about"
                className="text-sm font-medium text-accent-pink hover:underline"

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BookCard } from "./book-card";
 import { getAllBooks, getSeriesBySlug } from "../lib/books";
+import { Button } from "./button";
 
 export function BookGrid() {
   const books = getAllBooks();
@@ -8,12 +9,12 @@ export function BookGrid() {
   return (
     <section id="books" className="flex flex-col gap-6">
       <div className="flex items-center justify-between">
-        <h2 className="font-display text-2xl font-bold uppercase tracking-wide text-foreground">
+        <h2 className="font-display text-2xl font-bold uppercase tracking-wide text-foreground rounded-lg bg-background/60 p-3 backdrop-blur-sm">
           Books
         </h2>
         <Link
           href="/books"
-          className="text-sm font-medium text-accent-pink hover:underline"
+          className="text-sm font-medium text-accent-pink hover:underline rounded-lg bg-background/60 p-3 backdrop-blur-sm"
         >
           View All Books →
         </Link>

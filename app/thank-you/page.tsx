@@ -42,7 +42,6 @@ export default function ThankYou() {
                   <Button href="/connect" variant="outline" size="md" className="inline-block min-w-40 text-center">
                      Connect
                   </Button>
-                  <SocialLinks/>
                </GlowPanel>
             </main>
             <SiteFooter />

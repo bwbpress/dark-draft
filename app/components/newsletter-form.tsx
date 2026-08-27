@@ -37,7 +37,7 @@ export function NewsletterForm({
 
   if (submitted) {
     return (
-      <p className={`text-sm text-foreground ${className}`}>
+      <p className={`text-sm text-accent-pink ${className}`}>
         Thanks for signing up! Please check your inbox to confirm.
       </p>
     );
