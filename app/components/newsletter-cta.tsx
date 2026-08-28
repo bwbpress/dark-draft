@@ -15,18 +15,13 @@ export function NewsletterCta() {
         </span>
         <div>
           <h2 className="font-display text-xl font-bold text-foreground">
-            Join my Newsletter
+            Contact and Inquiries
           </h2>
           <p className="text-sm text-muted">
-            Stay in the loop with behind-the-scenes updates, release announcements, bonus content and more.
+            Please send an email to: hello at website
           </p>
         </div>
       </div>
-      <NewsletterForm
-        buttonLabel="Sign up"
-        className="flex flex-col gap-3 sm:flex-row sm:items-center"
-        inputClassName="sm:w-64"
-      />
     </GlowPanel>
   );
 }
