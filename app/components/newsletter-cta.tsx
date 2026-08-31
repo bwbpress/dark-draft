@@ -1,5 +1,14 @@
+"use client";
+
 import { GlowPanel } from "./glow-panel";
 import { NewsletterForm } from "./newsletter-form";
+import { Button } from "./button";
+
+const CONTACT_EMAIL_PARTS = ["dystroh", "dystroh.com"];
+
+function openContactEmail() {
+  window.location.href = `mailto:${CONTACT_EMAIL_PARTS.join("@")}`;
+}
 
 export function NewsletterCta() {
   return (
@@ -17,11 +26,13 @@ export function NewsletterCta() {
           <h2 className="font-display text-xl font-bold text-foreground">
             Contact and Inquiries
           </h2>
-          <p className="text-sm text-muted">
+          {/* <p className="text-sm text-muted">
             Please send an email to: hello at website
-          </p>
+          </p> */}
         </div>
+
       </div>
+      <Button onClick={openContactEmail}>Email Me</Button>
     </GlowPanel>
   );
 }
