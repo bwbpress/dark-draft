@@ -47,7 +47,7 @@ export default function BooksPage() {
                 className="flex flex-col gap-3 items-center rounded-2xl border border-glow/20 bg-surface/50 p-4 transition-colors hover:border-accent-pink"
               >
                 <BookCover
-                  image={book.coverImage}
+                  image={book.coverImageThumb}
                   alt={book.coverImageAlt}
                   isPlaceholder={book.coverIsPlaceholder}
                   className="max-w-none!"

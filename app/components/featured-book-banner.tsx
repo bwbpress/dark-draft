@@ -16,7 +16,7 @@ export function FeaturedBookBanner({ book, series }: FeaturedBookBannerProps) {
     status,
     seriesPosition,
     slug,
-    coverImage,
+    coverImageThumb,
     coverImageAlt,
     coverIsPlaceholder,
     arcLink
@@ -37,7 +37,7 @@ export function FeaturedBookBanner({ book, series }: FeaturedBookBannerProps) {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
         <div className="min-w-24 shrink-0">
           <BookCover
-            image={coverImage}
+            image={coverImageThumb}
             alt={coverImageAlt}
             isPlaceholder={coverIsPlaceholder}
           />

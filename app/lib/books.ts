@@ -44,6 +44,7 @@ export type Book = {
   isbn13?: string;
   /** Reuses an existing site asset as a stand-in cover; swap for real cover art. */
   coverImage: string;
+  coverImageThumb: string;
   coverImageAlt: string;
   /** True while coverImage is a stand-in — renders a "Cover Coming Soon" overlay instead of the raw placeholder art. */
   coverIsPlaceholder?: boolean;
@@ -76,7 +77,8 @@ export const BOOKS: Book[] = [
       "**Two fugitive mercenaries. One steamy wager. Enough denial to reduce competent killers to obsessive idiots.** \n\n It's been a long day. Tiernan just wants to settle in for the night, maybe have an emotionally detached bang with his unlikely, smokin' hot ally, and take a long, luxurious bath… not that he has access to a bathtub. So of course Danil has to drag things out by proposing this dumb kinky bet that pits them against each other in an unscheduled side heist. That smartass enigma of a hitman knows Tiernan can't turn down a little competition, no matter how tired he is.\n\n Danil has always been a makeout guy. Sure, sex is great, but there's just something electrifying about the ridiculous act of mashing your face into someone else's. Just his luck that his unbelievably sexy nemesis-with-benefits is all but allergic to kissing. Their time on the run together has been a thrill -- Tiernan is lethally adept, holds his own against Danil's nonstop heckling, and is absolutely wild in bed. If only there were about five hundred times more kissing, then this would be the perfect temporary arrangement. He couldn't possibly want any more out of this, right? \n\n Winner Takes Loser is a high-heat, emotionally messy, and danger-packed bonus story from an multi-part action-romance series set in dystopian cyberpunk Boston, starring these two violently unhinged men who would rather be tied up than face their feelings. \n\n\n ISBN-13: 979-8-952631-00-7 (ebook)",
     // isbn13: "SEO_PLACEHOLDER_ISBN13_the-datasource",
     isbn13: "979-8-952631-00-7 (ebook)",
-    coverImage: "/img/books/hack-and-harrow/static_bind_arc_jpg_small.JPG",
+    coverImage: "/img/books/hack-and-harrow/static-bind_cover_art.jpg",
+    coverImageThumb: "/img/books/hack-and-harrow/static-bind_cover_art_small.webp",
     coverImageAlt:
       "Static Bind ARC cover art: two men entangled together, one with a glowing red eye, against a red glitch-effect cyberpunk cityscape",
     coverIsPlaceholder: false,
@@ -101,6 +103,7 @@ export const BOOKS: Book[] = [
     description: "Coming Early 2027",
     // isbn13: "SEO_PLACEHOLDER_ISBN13_the-datasource",
     coverImage: "/img/books/hack-and-harrow/book1-breach-cover.jpg",
+    coverImageThumb: "/img/books/hack-and-harrow/book1-breach-cover_small.webp",
     coverImageAlt:
       "Hack & Harrow Book One: Breach — neon pink and teal title treatment on a black background",
     coverIsPlaceholder: false,

@@ -75,7 +75,7 @@ export default async function BookPage({ params }: Props) {
         </nav>
 
         <div className="grid gap-10 lg:grid-cols-[320px_1fr]">
-          <BookCover image={book.coverImage} alt={book.coverImageAlt} isPlaceholder={book.coverIsPlaceholder}/>
+          <BookCover image={book.coverImageThumb} alt={book.coverImageAlt} isPlaceholder={book.coverIsPlaceholder}/>
 
           <div className="flex flex-col gap-5">
             {series && (

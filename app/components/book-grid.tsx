@@ -28,7 +28,7 @@ export function BookGrid() {
               series={series ? `${series.name} ${book.seriesPosition && book.seriesPosition >= 1 ? `Book ${book.seriesPosition}` : ""}` : "Standalone Novella"}
               blurb={book.blurb}
               href={`/books/${book.slug}`}
-              coverImage={book.coverImage}
+              coverImage={book.coverImageThumb}
               coverImageAlt={book.coverImageAlt}
               coverIsPlaceholder={book.coverIsPlaceholder}
               animationDelay={-(index * 1.3) % 4}
