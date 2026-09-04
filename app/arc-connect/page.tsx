@@ -29,11 +29,11 @@ type ARC_LINK = {
 const ARC_CONTENT:ARC_LINK[] = [
    {
       id: "goodreads",
-      href: "https://google.com",
+      href: "https://www.goodreads.com/book/show/257868337-static-bind",
       label:"GoodReads",
       textBody: "Thank you from the bottom of my heart for ARC reading Static Bind. If you enjoyed this story, a rating and a review would go a long way. Find the Goodreads page here:",
-      disabled:true,
-      disabledText:"(GOODREADS PAGE COMING SOON)"
+      // disabled:true,
+      // disabledText:"(GOODREADS PAGE COMING SOON)"
    },
    {
       id: "newsletter",
@@ -82,7 +82,7 @@ export default function ArcThankYou() {
                               />
                            )}
                            {option.id !== "newsletter" && (
-                              <Button href={option.href} variant="outline" disabled={option.disabled} size="md" className="inline-block min-w-60 text-center">
+                              <Button href={option.href} variant="outline" disabled={option.disabled} target="_blank" size="md" className="inline-block min-w-60 text-center">
                                  {option.disabled ? option.disabledText : option.label}
                               </Button>
                            )}
