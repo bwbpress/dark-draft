@@ -14,6 +14,11 @@ export const SITE_URL = "https://dystroh.com";
 
 export const AUTHOR_NAME = "Dystro Han";
 
+// Pen name / handle people search for interchangeably with AUTHOR_NAME.
+// Surfaced in titles, meta description, and Person JSON-LD `alternateName`
+// so "dystroh romance author" ranks alongside "dystro romance author".
+export const AUTHOR_ALT_NAME = "dystroh";
+
 // ~150-160 characters, used as the default meta description and in the
 // Person JSON-LD `description` field.
 export const AUTHOR_BIO_SHORT =
@@ -36,6 +41,8 @@ export const AUTHOR_PHOTO_ALT =
 // legacy <meta name="keywords"> tag is ignored by Google, but genre/trope
 // terms here still guide on-page copy and other engines that read it.
 export const SITE_KEYWORDS = [
+  "dystroh",
+  "dystro han",
   "indie author",
   "romance author",
   "dark romance",

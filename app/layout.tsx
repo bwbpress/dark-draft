@@ -4,6 +4,7 @@ import "./globals.css";
 import { JsonLd } from "./components/json-ld";
 import { buildPersonJsonLd, buildWebsiteJsonLd } from "./lib/structured-data";
 import {
+  AUTHOR_ALT_NAME,
   AUTHOR_NAME,
   AUTHOR_BIO_SHORT,
   SITE_IS_LIVE,
@@ -25,12 +26,12 @@ const inter = Inter({
 });
 
 const DESCRIPTION =
-  `Author site for Dystro Han aka dystroh. Dystro is the indie queer romance author of the upcoming epic cyberpunk MM dark romance series, Hack & Harrow.`;
+  `${AUTHOR_ALT_NAME} (${SITE_TAGLINE}) is an indie queer romance author of the upcoming epic cyberpunk MM dark romance series, Hack & Harrow.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_TAGLINE}`,
+    default: `${SITE_TAGLINE} (${AUTHOR_ALT_NAME}) — Queer Romance Author`,
     template: `%s | ${SITE_NAME}`,
   },
   description: DESCRIPTION,

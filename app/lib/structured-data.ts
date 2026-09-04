@@ -3,6 +3,7 @@
 // the layout and individual pages.
 
 import {
+  AUTHOR_ALT_NAME,
   AUTHOR_BIO_SHORT,
   AUTHOR_NAME,
   AUTHOR_PHOTO,
@@ -22,6 +23,7 @@ export function buildPersonJsonLd() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: AUTHOR_NAME,
+    alternateName: AUTHOR_ALT_NAME,
     url: SITE_URL,
     image: absoluteUrl(AUTHOR_PHOTO),
     description: AUTHOR_BIO_SHORT,

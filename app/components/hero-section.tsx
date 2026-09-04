@@ -6,8 +6,13 @@ export function HeroSection() {
   return (
     <section className="grid gap-10 pt-16 lg:pb-16 lg:grid-cols-[1.4fr_1fr] lg:gap-16 ">
       <div className="flex flex-col items-start gap-6">
-        <h1 className="bg-linear-to-r from-accent-pink to-accent-blue bg-clip-text font-display text-5xl font-semibold uppercase tracking-wide text-transparent sm:text-6xl">
-          Dystro Han
+        <h1 className="flex flex-wrap items-baseline gap-x-3 gap-y-1 font-display">
+          <span className="bg-linear-to-r from-accent-pink to-accent-blue bg-clip-text text-5xl font-semibold uppercase tracking-wide text-transparent sm:text-6xl">
+            Dystro Han
+          </span>
+          <span className="whitespace-nowrap text-xs font-semibold uppercase text-muted">
+            AKA DYSTROH
+          </span>
         </h1>
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-muted">
           AN INDIE AUTHOR WRITING QUEER EPIC ROMANCE
