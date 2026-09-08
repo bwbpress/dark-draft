@@ -24,7 +24,7 @@ export function BookCard({
 }: BookCardProps) {
   return (
     <div className="flex flex-col gap-3">
-      <BookCover image={coverImage} alt={coverImageAlt} isPlaceholder={coverIsPlaceholder} animationDelay={animationDelay}/>
+      <BookCover image={coverImage} alt={coverImageAlt} isPlaceholder={coverIsPlaceholder} animationDelay={animationDelay} href={href}/>
       <div className="flex flex-col gap-1 rounded-lg bg-background/60 p-3 backdrop-blur-sm">
         <h3 className="font-display text-base text-foreground">{title}</h3>
         <p className="text-xs uppercase tracking-wide text-muted">{series}</p>

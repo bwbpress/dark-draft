@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import { GlowPanel } from "./glow-panel";
 
-export default function BookCover({ image, alt, animationDelay, isAnimated = false, isPlaceholder = false, className }: { image: string, alt:string, animationDelay?:number, isAnimated?:boolean, isPlaceholder?:boolean, className?:string }) {
-   return (
+export default function BookCover({ image, alt, animationDelay, isAnimated = false, isPlaceholder = false, className, href }: { image: string, alt:string, animationDelay?:number, isAnimated?:boolean, isPlaceholder?:boolean, className?:string, href?:string }) {
+   const cover = (
       <GlowPanel
          rounded="lg"
          background="gradient"
@@ -39,5 +40,13 @@ export default function BookCover({ image, alt, animationDelay, isAnimated = fal
             />
          )}
       </GlowPanel>
+   )
+
+   if (!href) return cover;
+
+   return (
+      <Link href={href} tabIndex={-1} aria-hidden className="block w-full cursor-pointer">
+         {cover}
+      </Link>
    )
 }

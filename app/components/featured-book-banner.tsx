@@ -40,6 +40,7 @@ export function FeaturedBookBanner({ book, series }: FeaturedBookBannerProps) {
             image={coverImageThumb}
             alt={coverImageAlt}
             isPlaceholder={coverIsPlaceholder}
+            href={href}
           />
         </div>
         <div className="flex flex-col gap-2">
