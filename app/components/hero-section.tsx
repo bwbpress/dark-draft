@@ -1,6 +1,7 @@
 import { GlowPanel } from "./glow-panel";
 import { NewsletterForm } from "./newsletter-form";
 import { SocialLinks } from "./social-links";
+import { Button } from "./button";
 
 export function HeroSection() {
   return (
@@ -41,6 +42,13 @@ export function HeroSection() {
         <p className="text-center text-xs text-muted">
           General Newsletter goes out once or twice a month. Unsubscribe anytime.
         </p>
+        <h2 className="font-display text-xl font-bold text-foreground uppercase mt-4">
+          Arc and Alc open!
+        </h2>
+        <p className="text-sm text-muted">
+          Get your free copy of Static Bind, the spicy short story introduction to Hack & Harrow
+        </p>
+        <Button href="https://forms.gle/LFipAdDC6xvgB4Kv5" className="text-center">Get your free copy</Button>
       </GlowPanel>
     </section>
   );
