@@ -90,7 +90,7 @@ export const BOOKS: Book[] = [
       // { retailer: "Amazon", url: "SEO_PLACEHOLDER_RETAILER_URL_static-bind-a-hack-and-harrow-story_amazon" },
     ],
     featured: true,
-    // arcLink: "https://forms.gle/LFipAdDC6xvgB4Kv5"
+    arcLink: "https://forms.gle/LFipAdDC6xvgB4Kv5"
   },
   {
     slug: "hack-and-harrow-book-1-breach",
