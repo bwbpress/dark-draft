@@ -35,12 +35,12 @@ const ARC_CONTENT:ARC_LINK[] = [
       // disabled:true,
       // disabledText:"(GOODREADS PAGE COMING SOON)"
    },
-   {
-      id: "newsletter",
-      href: "https://forms.gle/LFipAdDC6xvgB4Kv5",
-      label:"Sign Up",
-      textBody: "Sign up for my newsletter below to stay updated on all things Hack & Harrow, including updates on the series launch in Q2 2027 and the upcoming audiobook Advance Listener Copy (ALC). Static Bind is narrated by an extremely talented voice actor who would like to remain anonymous for now, but let's give him some hype! I can't wait for everyone to hear his amazing narration."
-   },
+   // {
+   //    id: "newsletter",
+   //    href: "https://forms.gle/LFipAdDC6xvgB4Kv5",
+   //    label:"Sign Up",
+   //    textBody: "Sign up for my newsletter below to stay updated on all things Hack & Harrow, including updates on the series launch in Q2 2027 and the upcoming audiobook Advance Listener Copy (ALC). Static Bind is narrated by an extremely talented voice actor who would like to remain anonymous for now, but let's give him some hype! I can't wait for everyone to hear his amazing narration."
+   // },
    {
       id: "discord",
       href: "http://dsc.gg/staticbindarc",
