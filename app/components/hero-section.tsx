@@ -43,7 +43,7 @@ export function HeroSection() {
           Stay in the loop with behind-the-scenes updates, release announcements, bonus content and more.
         </p>
         <NewsletterForm
-          buttonLabel="Sign Up"
+          buttonLabel="Join the Newsletter"
           className="flex flex-col gap-4"
         />
         <p className="text-center text-xs text-muted">

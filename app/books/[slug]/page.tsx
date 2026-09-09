@@ -10,6 +10,8 @@ import { SITE_NAME } from "../../lib/site-config";
 import BookCover from "@/app/components/bookCover";
 import { FormattedText } from "../../components/formatted-text";
 import { Button } from "@/app/components/button";
+import { EditionItem } from "../../components/edition-item";
+import { NewsletterForm } from "@/app/components/newsletter-form";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -38,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url,
       title: `${book.title} | ${SITE_NAME}`,
       description: book.blurb,
-      ...(book.isbn13 ? { isbn: book.isbn13 } : {}),
+      ...(book.isbn13 ? { isbn: book.isbn13.value } : {}),
       releaseDate: book.releaseDate,
     },
     // No `images` here on purpose: leaving it unset makes Next.js fall back
@@ -95,7 +97,17 @@ export default async function BookPage({ params }: Props) {
             </p>
             {/* <p className="max-w-xl text-base text-muted">{book.blurb}</p> */}
             <FormattedText text={book.description} className="max-w-xl text-sm text-muted" />
-
+            {book.showNewsletter && 
+              <div className="w-full flex flex-col mt-auto gap-2">
+                <p className="text-lg font-display font-semibold text-foreground">
+                  Sign up for my Newsletter
+                </p>
+                <p className="text-muted text-sm mb-4">
+                  Stay up to date with Hack & Harrow book one news!
+                </p>
+                <NewsletterForm buttonLabel="Join the Newsletter" className="w-full max-w-100 flex flex-col gap-2"/>
+              </div>
+            }
             {book.retailerLinks.length > 0 && (
               <div className="flex flex-col gap-3 pt-4">
                 <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-foreground">
@@ -129,6 +141,22 @@ export default async function BookPage({ params }: Props) {
             )}
           </div>
         </div>
+
+        {book.editions.length > 0 && (
+          <section className="flex flex-col gap-6 w-full mb-12" aria-labelledby="editions-heading">
+            <h2
+              id="editions-heading"
+              className="text-2xl font-display font-semibold uppercase tracking-[0.3em] text-foreground"
+            >
+              Editions
+            </h2>
+            <div className="flex flex-col gap-10">
+              {book.editions.map((edition) => (
+                <EditionItem key={edition.name} edition={edition} />
+              ))}
+            </div>
+          </section>
+        )}
       </main>
       <SiteFooter />
       <JsonLd data={buildBookJsonLd(book, series)} />

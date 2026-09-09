@@ -39,7 +39,7 @@ export default function ThankYou() {
                      Connect with me everywhere!
                   </h2>
                   <Button href="/connect" variant="outline" size="md" className="inline-block min-w-40 text-center">
-                     Connect
+                     Find me on social media
                   </Button>
                </GlowPanel>
             </main>

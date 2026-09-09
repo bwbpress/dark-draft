@@ -56,6 +56,10 @@ export type SocialLink = {
   label: SocialType;
   href: string;
 };
+export type AuthorLink = {
+  label: string;
+  href: string;
+}
 
 // Every profile referenced here should use the identical author name/photo
 // so Google can tie them together as the same entity (see Person JSON-LD
@@ -68,6 +72,10 @@ export const SOCIAL_LINKS: SocialLink[] = [
   { label: "Instagram", href: "https://www.instagram.com/dystro.han/", },
   { label: "Bluesky", href: "https://bsky.app/profile/dystroh.bsky.social" },
 ];
+
+export const AUTHOR_PAGE_LINKS: AuthorLink[] = [
+  
+]
 
 
 // Google Search Console / Bing Webmaster Tools verification codes.

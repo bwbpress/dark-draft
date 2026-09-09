@@ -36,7 +36,8 @@ export default function Connect() {
                   glow
                   className="flex flex-col gap-6 items-center min-h-30 py-12 px-4 lg:px-12"
          >
-                  <h1 className="font-display text-xl font-bold text-foreground mb-8 text-center">Connect with me everywhere!</h1>
+                  <h1 className="font-display text-xl font-bold text-foreground mb-2 text-center">Connect with me everywhere!</h1>
+                  <p className="max-w-sm text-sm text-muted text-center mb-8">Follow me on all my socials to stay up to date with all the latest news about my books</p>
                   {SOCIAL_LINKS.map((option) =>  (
                      <Button href={option.href} variant="outline" size="md" className="inline-block min-w-60 text-center" key={option.label}>
                         {option.label}

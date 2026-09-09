@@ -49,13 +49,24 @@ export function buildBookJsonLd(book: Book, series: Series | undefined) {
     url: absoluteUrl(`/books/${book.slug}`),
     image: absoluteUrl(book.coverImage),
     description: toPlainText(book.description),
-    ...(book.isbn13 ? { isbn: book.isbn13 } : {}),
+    ...(book.isbn13 ? { isbn: book.isbn13.value } : {}),
     inLanguage: "en",
     author: {
       "@type": "Person",
       name: AUTHOR_NAME,
       url: SITE_URL,
     },
+    ...(book.editions.length > 0
+      ? {
+          workExample: book.editions
+            .filter((edition) => edition.isbn)
+            .map((edition) => ({
+              "@type": "Book",
+              bookFormat: edition.name,
+              isbn: edition.isbn!.value,
+            })),
+        }
+      : {}),
     ...(series
       ? {
           isPartOf: {

@@ -15,7 +15,7 @@ export function BookGrid() {
           href="/books"
           className="text-sm font-medium text-accent-pink hover:underline rounded-lg bg-background/60 p-3 backdrop-blur-sm"
         >
-          View All Books →
+          Browse all books →
         </Link>
       </div>
       <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
@@ -25,6 +25,7 @@ export function BookGrid() {
             <BookCard
               key={book.slug}
               title={book.title}
+              shortTitle={book.shortTitle}
               series={series ? `${series.name} ${book.seriesPosition && book.seriesPosition >= 1 ? `Book ${book.seriesPosition}` : ""}` : "Standalone Novella"}
               blurb={book.blurb}
               href={`/books/${book.slug}`}

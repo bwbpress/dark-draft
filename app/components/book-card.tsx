@@ -3,6 +3,7 @@ import BookCover from "./bookCover";
 
 type BookCardProps = {
   title: string;
+  shortTitle: string;
   series: string;
   blurb: string;
   href: string;
@@ -14,6 +15,7 @@ type BookCardProps = {
 
 export function BookCard({
   title,
+  shortTitle,
   series,
   blurb,
   href,
@@ -33,7 +35,7 @@ export function BookCard({
           href={href}
           className="mt-1 text-sm font-medium text-accent-pink hover:underline"
         >
-          Learn More →
+          {shortTitle} details
         </Link>
       </div>
     </div>

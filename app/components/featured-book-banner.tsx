@@ -64,7 +64,7 @@ export function FeaturedBookBanner({ book, series }: FeaturedBookBannerProps) {
           variant="outline"
           className="shrink-0 self-start sm:self-end"
         >
-          View Details
+          Read about Static Bind
         </Button>
         {arcLink &&
           <Button
