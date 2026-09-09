@@ -7,21 +7,10 @@ import { SITE_NAME } from "../../lib/site-config";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+export const alt = "Book cover";
+
 export function generateStaticParams() {
   return getAllBooks().map((book) => ({ slug: book.slug }));
-}
-
-export function generateImageMetadata({ params }: { params: { slug: string } }) {
-  const book = getBookBySlug(params.slug);
-
-  return [
-    {
-      id: params.slug,
-      alt: book ? `${book.title} cover` : "Book cover",
-      size,
-      contentType,
-    },
-  ];
 }
 
 const COLORS = {
