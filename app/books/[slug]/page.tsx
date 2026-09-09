@@ -87,7 +87,7 @@ export default async function BookPage({ params }: Props) {
           / <span className="text-foreground">{book.title}</span>
         </nav>
 
-        <div className="grid gap-10 lg:grid-cols-[320px_1fr]">
+        <div className="flex flex-col justify-center items-center lg:grid gap-10 lg:grid-cols-[320px_1fr]">
           <BookCover image={book.coverImageThumb} alt={book.coverImageAlt} isPlaceholder={book.coverIsPlaceholder}/>
 
           <div className="flex flex-col gap-5">
@@ -145,7 +145,7 @@ export default async function BookPage({ params }: Props) {
                 href={book.arcLink}
                 target="_blank"
                 variant="outline"
-                className="shrink-0 self-start mt-8"
+                className="shrink-0 self-center lg:self-start mt-8"
               >
                 Apply to be an ARC Reader
               </Button>
@@ -161,7 +161,7 @@ export default async function BookPage({ params }: Props) {
             >
               Editions
             </h2>
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-12">
               {book.editions.map((edition) => (
                 <EditionItem key={edition.name} edition={edition} />
               ))}

@@ -43,7 +43,7 @@ const ARC_CONTENT:ARC_LINK[] = [
    },
    {
       id: "discord",
-      href: "http://dsc.gg/staticbindarc",
+      href: "https://dsc.gg/staticbindarc",
       label:"Join The Discord",
       textBody: "Join my Discord server with the button below to receive an exclusive Launch ARC role, engage with me and my (hopefully growing!) community, and give input on the final cover art progress. The finishing touches and final background will still be WIP leading up to Static Bind's full launch. Come chat and be a part of the process!"
    },

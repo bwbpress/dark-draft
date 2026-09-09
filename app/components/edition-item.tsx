@@ -5,7 +5,7 @@ import { Button } from "./button";
 export function EditionItem({ edition }: { edition: Edition }) {
   return (
     <div className="flex gap-4 sm:gap-6 w-full">
-      <div className="relative aspect-square w-20 shrink-0 overflow-hidden rounded-md sm:w-24 md:w-40">
+      <div className="relative aspect-square shrink-0 overflow-hidden rounded-md w-40 md:w-60">
         <Image
           src={edition.image}
           alt={edition.imageAlt}
@@ -18,6 +18,11 @@ export function EditionItem({ edition }: { edition: Edition }) {
       <div className="flex flex-col grow gap-4 pt-1">
         <h3 className="border-b border-glow/30 pb-1 text-xl font-display font-bold uppercase tracking-wide text-foreground">
           {edition.name}
+          {edition.nameSubtitle && (
+            <span className="ml-2 text-sm font-sans font-normal normal-case tracking-normal text-muted">
+              {edition.nameSubtitle}
+            </span>
+          )}
         </h3>
         <p className="text-sm text-muted">
           {edition.isbn ? `ISBN-13: ${edition.isbn.display}` : ""}

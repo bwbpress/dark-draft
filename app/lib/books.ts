@@ -27,6 +27,8 @@ export type Isbn = {
 /** A purchasable format of a book — e.g. "Ebook", "Paperback", "Audiobook". */
 export type Edition = {
   name: string;
+  /** Shown after the name in smaller, muted text, e.g. "Narrated by Brendon North". */
+  nameSubtitle?: string;
   isbn?: Isbn;
   /** e.g. "Static Bind will be available February 2027 on these platforms..." Use instead of isbn while unreleased. */
   availabilityText?: string;
@@ -115,7 +117,7 @@ export const BOOKS: Book[] = [
       {
         name: "Ebook",
         isbn: { display: "979-8-952631-00-7 (ebook)", value: "9798952631007" },
-        image: "/img/books/hack-and-harrow/static-bind_cover_art_small.webp",
+        image: "/img/books/hack-and-harrow/static-bind_ebook_small.webp",
         imageAlt:
           "Static Bind ebook cover art: two men entangled together, one with a glowing red eye, against a red glitch-effect cyberpunk cityscape",
         retailerLinks: [
@@ -130,10 +132,11 @@ export const BOOKS: Book[] = [
         ],
       },
       {
-        name: "Audiobook Narrated by Brendon North",
+        name: "Audiobook",
+        nameSubtitle: "Narrated by Brendon North",
         isbn: { display: "979-8-952631-02-1 (audiobook)", value: "9798952631021" },
         availabilityText: "Releasing on September 21", 
-        image: "/img/books/hack-and-harrow/static-bind_audio_cover_small.webp",
+        image: "/img/books/hack-and-harrow/static-bind_audio_drawn.webp",
         imageAlt:
           "Static Bind audiobook cover art: two men entangled together, one with a glowing red eye, against a red glitch-effect cyberpunk cityscape",
         retailerLinks: [],
