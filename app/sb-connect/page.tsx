@@ -23,6 +23,7 @@ type ARC_LINK = {
    href:string;
    label:string;
    textBody:string;
+   textBodyBelow?:string;
    disabled?:boolean;
    disabledText?:string;
 }
@@ -36,18 +37,17 @@ const SB_CONTENT:ARC_LINK[] = [
       // disabledText:"(GOODREADS PAGE COMING SOON)"
    },
    {
-      id: "newsletter",
-      href: "",
-      label:"Sign Up for my Newsletter",
-      textBody: "Sign up for my newsletter below to stay updated on all things Hack & Harrow, including updates on the series launch in Spring 2027."
+      id: "newsletter-button",
+      href: "https://dl.bookfunnel.com/or9vmc9q38",
+      label:"Get the bonus epilogue",
+      textBody: "Sign up for my newsletter to get the free bonus epilogue for Static Bind!"
    },
    {
       id: "audiobook",
-      href: "",
-      label:"Get the Audiobook",
-      textBody: "",
-      disabled:true,
-      disabledText:"(AUDIOBOOK COMING SOON)"
+      href: "https://forms.gle/LFipAdDC6xvgB4Kv5",
+      label:"Apply for the Advanced Listener Copy",
+      textBody: "Audiobook will release around September 21 to Audible, Apple Audiobooks, Google Play Audiobooks, Spotify, and anywhere else that you get your audiobooks.",
+      textBodyBelow: "Want to listen to the audiobook earlier? apply for the Advanced Listener Copy",
    },
    {
       id: "preorder",
@@ -83,7 +83,8 @@ export default function SBConnect() {
                   <div className="flex flex-col gap-12 max-w-3xl mt-8 text-muted">
                      {SB_CONTENT.map((option) => (
                         <div key={option.label} className="flex flex-col gap-6 items-center border-accent-purple border-t pt-12">
-                           <p>{option.textBody}</p>
+                           <p className="text-center">{option.textBody}</p>
+                           {option.textBodyBelow && <p className="text-center">{option.textBodyBelow}</p>}
                            {option.id === "newsletter" && (
                               <NewsletterForm
                                  buttonLabel={option.label || "Sign Up"}
