@@ -47,7 +47,7 @@ const SB_CONTENT:ARC_LINK[] = [
       href: "https://forms.gle/LFipAdDC6xvgB4Kv5",
       label:"Apply for the Advanced Listener Copy",
       textBody: "Audiobook will release around September 21 to Audible, Apple Audiobooks, Google Play Audiobooks, Spotify, and anywhere else that you get your audiobooks.",
-      textBodyBelow: "Want to listen to the audiobook earlier? apply for the Advanced Listener Copy",
+      textBodyBelow: "Want to listen to the audiobook earlier? Apply for the Advanced Listener Copy",
    },
    {
       id: "preorder",
