@@ -29,6 +29,7 @@ export type Edition = {
   name: string;
   /** Shown after the name in smaller, muted text, e.g. "Narrated by Brendon North". */
   nameSubtitle?: string;
+  subTitleLink?: string;
   isbn?: Isbn;
   /** e.g. "Static Bind will be available February 2027 on these platforms..." Use instead of isbn while unreleased. */
   availabilityText?: string;
@@ -135,12 +136,23 @@ export const BOOKS: Book[] = [
       {
         name: "Audiobook",
         nameSubtitle: "Narrated by Brendon North",
+        subTitleLink: "https://brendonnorth.com/",
         isbn: { display: "979-8-952631-02-1 (audiobook)", value: "9798952631021" },
-        availabilityText: "Releasing on September 21", 
+        availabilityText: "Coming to Audible on the week of September 21", 
         image: "/img/books/hack-and-harrow/static-bind_audio_drawn.webp",
         imageAlt:
           "Static Bind audiobook cover art: two men entangled together, one with a glowing red eye, against a red glitch-effect cyberpunk cityscape",
-        retailerLinks: [],
+        retailerLinks: [
+          // { retailer: "Audible", url: ""},
+          { retailer: "Spotify", url: "https://open.spotify.com/show/0wav8lGUJ4setkvfpNd0gF?si=375dcb654e284f41"},
+          { retailer: "Apple Books", url: "https://books.apple.com/us/audiobook/static-bind-a-dark-cyberpunk-mm-romance-short/id6812357849"},
+          // { retailer: "Google Play", url: ""},
+          // { retailer: "AudioBooks.com", url: ""},
+          { retailer: "Barnes & Noble", url: "https://www.barnesandnoble.com/w/static-bind-dystro-han/1151310528?ean=2940204991309"},
+          { retailer: "Libro.fm", url: "https://libro.fm/audiobooks/9798952631021-static-bind-a-dark-cyberpunk-mm-romance-short"},
+          { retailer: "24Symbols", url: "https://www.24symbols.com/book/english/dystro-han/static-bind-a-dark-cyberpunk-mm-romance-short?id=5751179"},
+          { retailer: "TuneIn", url: "https://tunein.com/podcasts/Fiction---Gothic/Static-Bind-A-Dark-Cyberpunk-MM-Romance-Short-p4795740/"},
+        ],
       },
       {
         name: "Paperback",

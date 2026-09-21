@@ -20,7 +20,11 @@ export function EditionItem({ edition }: { edition: Edition }) {
           {edition.name}
           {edition.nameSubtitle && (
             <span className="ml-2 text-sm font-sans font-normal normal-case tracking-normal text-muted">
-              {edition.nameSubtitle}
+              {edition.subTitleLink ? 
+                <a href={edition.subTitleLink} target="_blank">{edition.nameSubtitle}</a>
+              :
+                edition.nameSubtitle
+              }
             </span>
           )}
         </h3>
@@ -34,7 +38,7 @@ export function EditionItem({ edition }: { edition: Edition }) {
         }
         {edition.retailerLinks.length > 0 && (
           <div className="flex flex-col gap-2">
-            <h4 className="text-base text-muted font-bold">Available for Preorder on:</h4>
+            <h4 className="text-base text-muted font-bold">Buy Now on:</h4>
             <div className="flex flex-wrap gap-3 pt-1">
               {edition.retailerLinks.map((link) => (
                 <Button
