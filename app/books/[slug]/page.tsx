@@ -87,7 +87,7 @@ export default async function BookPage({ params }: Props) {
           / <span className="text-foreground">{book.title}</span>
         </nav>
 
-        <div className="flex flex-col justify-center items-center lg:grid gap-10 lg:grid-cols-[320px_1fr]">
+        <div className="flex flex-col justify-center items-start lg:grid gap-10 lg:grid-cols-[320px_1fr]">
           <BookCover image={book.coverImageThumb} alt={book.coverImageAlt} isPlaceholder={book.coverIsPlaceholder}/>
 
           <div className="flex flex-col gap-5">
@@ -147,7 +147,7 @@ export default async function BookPage({ params }: Props) {
                 variant="outline"
                 className="shrink-0 self-center lg:self-start mt-8"
               >
-                Apply to be an ARC Reader
+                Get Access to the Audiobook ALC
               </Button>
             )}
           </div>

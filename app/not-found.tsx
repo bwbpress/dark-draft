@@ -7,11 +7,8 @@ import { GlowPanel } from "./components/glow-panel"
 import { NewsletterForm } from "./components/newsletter-form"
 
 export const metadata: Metadata = {
-   title: "Thank you for being an ARC reader",
-   description: "Thank you for reading! Here's where else you can find Dystro Han.",
-   alternates: {
-      canonical: "/arc-connect",
-   },
+   title: "Page Not Found",
+   description: "Page Not Found! Explore Dysroh's Website in the Navigation Bar",
    robots: {
       index: false,
       follow: true,

@@ -64,7 +64,7 @@ export function FeaturedBookBanner({ book, series }: FeaturedBookBannerProps) {
           variant="outline"
           className="shrink-0 self-start sm:self-end"
         >
-          Read about Static Bind
+          More about Static Bind
         </Button>
         {arcLink &&
           <Button
@@ -73,7 +73,7 @@ export function FeaturedBookBanner({ book, series }: FeaturedBookBannerProps) {
             variant="outline"
             className="shrink-0 self-start sm:self-end"
           >
-            Apply to be an ARC Reader
+            Get Access to the Audiobook ALC
           </Button>
         }
       </div>

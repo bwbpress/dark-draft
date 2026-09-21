@@ -10,6 +10,13 @@ function renderInline(text: string) {
     ) : 
     part.startsWith("%%") && part.endsWith("%%") ? (
       <i key={i}>{part.slice(2, -2)}</i>
+    ) : 
+    part.startsWith("@@") && part.endsWith("@@") ? (
+      <ul className="list-disc pl-4 pt-2" key={i}>        
+        {part.slice(2, -2).split("$").map((p, j) => (
+          p != "" && p !== " " ? <li key={j}>{p}</li> : null
+        ))}
+      </ul>
     ) : (
       part
     )
@@ -35,9 +42,12 @@ export function FormattedText({ text, className }: FormattedTextProps) {
   const paragraphs = text.trim().split(/\n{2,}/);
 
   return (
-    <div className={className ? `space-y-3 ${className}` : "space-y-3"}>
+    <div className={className ? `space-y-4 ${className}` : "space-y-4"}>
       {paragraphs.map((paragraph, i) => (
-        <p key={i}>{renderInline(paragraph)}</p>
+        paragraph.startsWith("^^") ?
+          <div key={i} className="pt-2">{renderInline(paragraph.slice(2))}</div>
+        :
+          <p key={i}>{renderInline(paragraph)}</p>
       ))}
     </div>
   );
