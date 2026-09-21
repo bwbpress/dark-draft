@@ -135,7 +135,7 @@ export const BOOKS: Book[] = [
       },
       {
         name: "Audiobook",
-        nameSubtitle: "Narrated by Brendon North",
+        nameSubtitle: "Brendon North",
         subTitleLink: "https://brendonnorth.com/",
         isbn: { display: "979-8-952631-02-1 (audiobook)", value: "9798952631021" },
         availabilityText: "Coming to Audible on the week of September 21", 

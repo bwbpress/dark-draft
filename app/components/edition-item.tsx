@@ -4,8 +4,8 @@ import { Button } from "./button";
 
 export function EditionItem({ edition }: { edition: Edition }) {
   return (
-    <div className="flex gap-4 sm:gap-6 w-full">
-      <div className="relative aspect-square shrink-0 overflow-hidden rounded-md w-40 md:w-60">
+    <div className="flex flex-col md:flex-row gap-4 sm:gap-6 w-full">
+      <div className="relative aspect-square shrink-0 overflow-hidden rounded-md w-full md:w-60">
         <Image
           src={edition.image}
           alt={edition.imageAlt}
@@ -20,8 +20,9 @@ export function EditionItem({ edition }: { edition: Edition }) {
           {edition.name}
           {edition.nameSubtitle && (
             <span className="ml-2 text-sm font-sans font-normal normal-case tracking-normal text-muted">
+              Narrated by&nbsp;
               {edition.subTitleLink ? 
-                <a href={edition.subTitleLink} target="_blank">{edition.nameSubtitle}</a>
+                <a href={edition.subTitleLink} target="_blank" className="underline hover:cursor-pointer hover:opacity-80">{edition.nameSubtitle}</a>
               :
                 edition.nameSubtitle
               }

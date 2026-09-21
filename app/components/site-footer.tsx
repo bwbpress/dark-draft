@@ -23,7 +23,7 @@ export function SiteFooter() {
         </Link>
       </nav>
       <p className="text-center">
-        {SITE_NAME}. All rights reserved.
+        © 2026 Byte Wyght Books. All rights reserved.
       </p>
       <p className="text-center text-[11px] text-muted/70">
         Website background designed by Mariya at Miblart &middot; Logo typography designed by Covers By Christian &middot; Website created by grond
