@@ -28,18 +28,16 @@ type ARC_LINK = {
 }
 const ARC_CONTENT:ARC_LINK[] = [
    {
-      id: "goodreads",
-      href: "https://www.goodreads.com/book/show/258342436-static-bind",
-      label:"GoodReads",
-      textBody: "Thank you from the bottom of my heart for ARC reading Static Bind. If you enjoyed this story, a rating and a review would go a long way. Find the Goodreads page here:",
-      // disabled:true,
-      // disabledText:"(GOODREADS PAGE COMING SOON)"
-   },
-   {
       id: "amazon",
       href: "https://www.amazon.com/dp/B0HH81JK4C/",
       label:"Amazon",
-      textBody: "Or leave a rating and a review on Amazon. Find the Amazon page here:",
+      textBody: "Thank you from the bottom of my heart for ARC reading Static Bind. If you enjoyed this story, a rating and a review would go a long way.",
+   },
+   {
+      id: "goodreads",
+      href: "https://www.goodreads.com/book/show/258342436-static-bind",
+      label:"GoodReads",
+      textBody: "Copying your review to GoodReads would also be appreciated, thank you!"
    },
    {
       id: "newsletter",

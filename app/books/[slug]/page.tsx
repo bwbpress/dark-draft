@@ -145,7 +145,7 @@ export default async function BookPage({ params }: Props) {
                 href={book.arcLink}
                 target="_blank"
                 variant="outline"
-                className="shrink-0 self-center lg:self-start mt-8"
+                className="shrink-0 self-center lg:self-start mt-8 text-center"
               >
                 Get Access to the Audiobook ALC
               </Button>
