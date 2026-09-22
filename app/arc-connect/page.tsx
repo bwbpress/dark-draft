@@ -5,6 +5,7 @@ import { SiteFooter } from "../components/site-footer"
 import { Button } from "../components/button"
 import { GlowPanel } from "../components/glow-panel"
 import { NewsletterForm } from "../components/newsletter-form"
+import { BOOK_LINKS } from "../lib/books"
 
 export const metadata: Metadata = {
    title: "Thank you for being an ARC reader",
@@ -28,22 +29,10 @@ type ARC_LINK = {
 }
 const ARC_CONTENT:ARC_LINK[] = [
    {
-      id: "amazon",
-      href: "https://www.amazon.com/dp/B0HH81JK4C/",
-      label:"Amazon",
-      textBody: "Thank you from the bottom of my heart for ARC reading Static Bind. If you enjoyed this story, a rating and a review would go a long way.",
-   },
-   {
-      id: "goodreads",
-      href: "https://www.goodreads.com/book/show/258342436-static-bind",
-      label:"GoodReads",
-      textBody: "Copying your review to GoodReads would also be appreciated, thank you!"
-   },
-   {
       id: "newsletter",
       href: "",
       label:"Sign Up",
-      textBody: "Sign up for my newsletter below to stay updated on all things Hack & Harrow, including updates on the series launch in Q2 2027 and the upcoming audiobook Advance Listener Copy (ALC). Static Bind is narrated by an extremely talented voice actor who would like to remain anonymous for now, but let's give him some hype! I can't wait for everyone to hear his amazing narration."
+      textBody: "Sign up for my newsletter below to stay updated on all things Hack & Harrow, including updates on the series launch in Q2 2027. Static Bind is narrated by an extremely talented voice actor who would like to remain anonymous for now, but let's give him some hype! I can't wait for everyone to hear his amazing narration."
    },
    {
       id: "discord",
@@ -75,8 +64,19 @@ export default function ArcThankYou() {
                      Below are all the ways you can engage with Hack & Harrow.
                   </h2>
                   <div className="flex flex-col gap-12 max-w-3xl mt-8 text-muted">
+                     <div key={"amazon-goodreads"} className="flex flex-col gap-6 items-center text-center border-accent-purple border-t pt-12">
+                        <p>Thank you for reading Static Bind. If you enjoyed this story, a rating and a review would go a long way.</p>
+                        <div className="flex flex-col md:flex-row gap-4">
+                            <Button href={BOOK_LINKS["static-bind"]["amazon-ebook"]} variant="outline" target="_blank" size="md" className="inline-block min-w-60 text-center">
+                                Amazon
+                            </Button>
+                            <Button href={BOOK_LINKS["static-bind"]["goodreads"]} variant="outline" target="_blank" size="md" className="inline-block min-w-60 text-center">
+                                Goodreads
+                            </Button>
+                        </div>
+                    </div>
                      {ARC_CONTENT.map((option) => (
-                        <div key={option.label} className="flex flex-col gap-6 items-center border-accent-purple border-t pt-12">
+                        <div key={option.label} className="flex flex-col gap-6 items-center text-center border-accent-purple border-t pt-12">
                            <p>{option.textBody}</p>
                            {option.id === "newsletter" && (
                               <NewsletterForm
