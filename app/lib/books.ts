@@ -91,7 +91,7 @@ export const SERIES: Series[] = [
 
 export const BOOKS: Book[] = [
   {
-    slug: "static-bind-a-hack-and-harrow-story",
+    slug: "static-bind",
     title: "Static Bind: A Dark Cyberpunk MM Romance Short",
     shortTitle: "Static Bind",
     seriesSlug: "hack-and-harrow",
