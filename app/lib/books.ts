@@ -138,7 +138,7 @@ export const BOOKS: Book[] = [
         nameSubtitle: "Brendon North",
         subTitleLink: "https://brendonnorth.com/",
         isbn: { display: "979-8-952631-02-1 (audiobook)", value: "9798952631021" },
-        availabilityText: "Coming to Google Play Audiobooks, audiobooks.com, and amazon.com", 
+        availabilityText: "Coming to Google Play Audiobooks, audiobooks.com, amazon.com, and more.", 
         image: "/img/books/hack-and-harrow/static-bind_audio_drawn.webp",
         imageAlt:
           "Static Bind audiobook cover art: two men entangled together, one with a glowing red eye, against a red glitch-effect cyberpunk cityscape",
