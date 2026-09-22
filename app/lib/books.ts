@@ -138,12 +138,12 @@ export const BOOKS: Book[] = [
         nameSubtitle: "Brendon North",
         subTitleLink: "https://brendonnorth.com/",
         isbn: { display: "979-8-952631-02-1 (audiobook)", value: "9798952631021" },
-        availabilityText: "Coming to Audible on the week of September 21", 
+        availabilityText: "Coming to Google Play Audiobooks, audiobooks.com, and amazon.com", 
         image: "/img/books/hack-and-harrow/static-bind_audio_drawn.webp",
         imageAlt:
           "Static Bind audiobook cover art: two men entangled together, one with a glowing red eye, against a red glitch-effect cyberpunk cityscape",
         retailerLinks: [
-          // { retailer: "Audible", url: ""},
+          { retailer: "Audible", url: "https://www.audible.com/pd/B0HKL2NRBZ"},
           { retailer: "Spotify", url: "https://open.spotify.com/show/0wav8lGUJ4setkvfpNd0gF?si=375dcb654e284f41"},
           { retailer: "Apple Books", url: "https://books.apple.com/us/audiobook/static-bind-a-dark-cyberpunk-mm-romance-short/id6812357849"},
           // { retailer: "Google Play", url: ""},
