@@ -51,7 +51,7 @@ export const SITE_KEYWORDS = [
   "science fiction romance",
 ];
 
-export type SocialType = "Instagram" | "TikTok" | "Facebook" | "Patreon" | "Royal Road" | "Bluesky";
+export type SocialType = "Instagram" | "TikTok" | "Facebook" | "Patreon" | "Royal Road" | "Bluesky" | "Amazon" | "Goodreads";
 export type SocialLink = {
   label: SocialType;
   href: string;
@@ -66,11 +66,13 @@ export type AuthorLink = {
 // `sameAs` in app/lib/structured-data.ts).
 export const SOCIAL_LINKS: SocialLink[] = [
   { label: "TikTok", href: "https://www.tiktok.com/@dystroh" },
-  { label: "Patreon", href: "https://www.patreon.com/c/dystrohdreams" },
+  // { label: "Patreon", href: "https://www.patreon.com/c/dystrohdreams" },
   { label: "Royal Road", href: "https://www.royalroad.com/profile/987576" },
   { label: "Facebook", href: "https://facebook.com/dystroh.dreams" },
   { label: "Instagram", href: "https://www.instagram.com/dystro.han/", },
-  { label: "Bluesky", href: "https://bsky.app/profile/dystroh.bsky.social" },
+  // { label: "Bluesky", href: "https://bsky.app/profile/dystroh.bsky.social" },
+  { label: "Amazon", href: "https://www.amazon.com/stores/Dystro-Han/author/B0HJBDJXPP" },
+  { label: "Goodreads", href: "https://www.goodreads.com/author/list/72039940.Dystro_Han" },
 ];
 
 export const AUTHOR_PAGE_LINKS: AuthorLink[] = [

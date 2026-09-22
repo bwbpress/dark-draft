@@ -148,10 +148,12 @@ export const BOOKS: Book[] = [
           { retailer: "Apple Books", url: "https://books.apple.com/us/audiobook/static-bind-a-dark-cyberpunk-mm-romance-short/id6812357849"},
           // { retailer: "Google Play", url: ""},
           // { retailer: "AudioBooks.com", url: ""},
+          { retailer: "Kobo", url: "https://kobo.com/en/ebook/static-bind-a-dark-cyberpunk-mm-romance-short-1"},
           { retailer: "Barnes & Noble", url: "https://www.barnesandnoble.com/w/static-bind-dystro-han/1151310528?ean=2940204991309"},
           { retailer: "Libro.fm", url: "https://libro.fm/audiobooks/9798952631021-static-bind-a-dark-cyberpunk-mm-romance-short"},
           { retailer: "24Symbols", url: "https://www.24symbols.com/book/english/dystro-han/static-bind-a-dark-cyberpunk-mm-romance-short?id=5751179"},
           { retailer: "TuneIn", url: "https://tunein.com/podcasts/Fiction---Gothic/Static-Bind-A-Dark-Cyberpunk-MM-Romance-Short-p4795740/"},
+          { retailer: "Bookmate", url: "https://bookmate.com/audiobooks/zizpusDO"}
         ],
       },
       {
