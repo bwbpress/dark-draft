@@ -30,10 +30,10 @@ export function HeroSection() {
 
       <GlowPanel id="newsletter" glow border="animated" className="flex flex-col gap-4 p-6 h-min">
         <h2 className="font-display text-xl font-bold text-foreground uppercase">
-          Arc and Alc open!
+          Alc open until 9/27
         </h2>
         <p className="text-sm text-muted">
-          Get your free copy of Static Bind, the spicy short story introduction to the Hack & Harrow series, releasing Spring 2027
+          Listen to the audiobook for free! Apply now for the ALC of Static Bind, the spicy short story introduction to the Hack & Harrow series, releasing Spring 2027
         </p>
         <Button href="https://forms.gle/LFipAdDC6xvgB4Kv5" className="text-center">Get your free copy</Button>
         <h2 className="font-display text-xl font-bold text-foreground mt-4">
