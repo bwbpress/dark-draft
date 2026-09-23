@@ -8,10 +8,10 @@ import { NewsletterForm } from "../components/newsletter-form"
 import { BOOK_LINKS } from "../lib/books"
 
 export const metadata: Metadata = {
-   title: "Thank you for reading Static Bind",
+   title: "Thank you for being an ARC reader",
    description: "Thank you for reading! Here's where else you can find Dystro Han.",
    alternates: {
-      canonical: "/sb-connect",
+      canonical: "/arc-connect",
    },
    robots: {
       index: false,
@@ -24,28 +24,27 @@ type ARC_LINK = {
    href:string;
    label:string;
    textBody:string;
-   textBodyBelow?:string;
    disabled?:boolean;
    disabledText?:string;
 }
-const SB_CONTENT:ARC_LINK[] = [
-   {
-      id: "newsletter-button",
-      href: "https://dl.bookfunnel.com/or9vmc9q38",
-      label:"Get the bonus epilogue",
-      textBody: "Sign up for my newsletter to get the free bonus epilogue for Static Bind!"
-   },
-   {
-      id: "preorder",
-      href: "",
-      label:"Preorder Hack & Harrow Book 1",
-      textBody: "Preorder Hack & Harrow Book 1",
-      disabled:true,
-      disabledText:"(PREORDER LINK COMING SOON)"
+const CM_CONTENT:ARC_LINK[] = [
+    {
+        id: "patreon",
+        href: "https://www.patreon.com/c/dystrohdreams",
+        label:"Join my Patreon",
+        textBody: "Join my Patreon free tier to get the Static Bind epilogue, bonus art, and more. New free content posted every month!"
+    },
+    {
+        id: "preorder",
+        href: "",
+        label:"Preorder Hack & Harrow Book 1",
+        textBody: "Preorder Hack & Harrow Book 1",
+        disabled:true,
+        disabledText:"(PREORDER LINK COMING SOON)"
    },
 ]
 
-export default function SBConnect() {
+export default function ArcThankYou() {
    return (
       <div className="relative flex min-h-full flex-1 flex-col bg-background">
          <BackgroundImageWithOverlay image="/img/Dystro-Han-BG.jpg" className="mt-40"/>
@@ -67,7 +66,7 @@ export default function SBConnect() {
                      Below are all the ways you can engage with Hack & Harrow.
                   </h2>
                   <div className="flex flex-col gap-12 max-w-3xl mt-8 text-muted">
-                     <div key={"amazon-goodreads"} className="flex flex-col gap-6 items-center text-center border-accent-purple border-t pt-12">
+                    <div key={"amazon-goodreads"} className="flex flex-col gap-6 items-center text-center border-accent-purple border-t pt-12">
                         <p>Thank you for reading Static Bind. If you enjoyed this story, a rating and a review would go a long way.</p>
                         <div className="flex flex-col md:flex-row gap-4">
                             <Button href={BOOK_LINKS["static-bind"]["amazon-ebook"]} variant="outline" target="_blank" size="md" className="inline-block min-w-60 text-center">
@@ -78,7 +77,7 @@ export default function SBConnect() {
                             </Button>
                         </div>
                     </div>
-                     <div key={"audiobook"} className="flex flex-col gap-6 items-center text-center border-accent-purple border-t pt-12">
+                    <div key={"audiobook"} className="flex flex-col gap-6 items-center text-center border-accent-purple border-t pt-12">
                         <p>If you enjoyed Static Bind get a copy of the audiobook narrated by Brendan North</p>
                         <div className="flex flex-col md:flex-row gap-4">
                             <Button href={BOOK_LINKS["static-bind"]["audible-audio"]} variant="outline" target="_blank" size="sm" className="inline-block min-w-60 text-center">
@@ -96,13 +95,14 @@ export default function SBConnect() {
                             More about Static Bind
                         </Button>
                     </div>
-                     {SB_CONTENT.map((option) => (
+
+
+                     {CM_CONTENT.map((option) => (
                         <div key={option.label} className="flex flex-col gap-6 items-center text-center border-accent-purple border-t pt-12">
-                           <p className="text-center">{option.textBody}</p>
-                           {option.textBodyBelow && <p className="text-center">{option.textBodyBelow}</p>}
+                           <p>{option.textBody}</p>
                            {option.id === "newsletter" && (
                               <NewsletterForm
-                                 buttonLabel={option.label || "Sign Up"}
+                                 buttonLabel="Sign up"
                                  className="flex flex-col gap-3 sm:flex-row sm:items-center"
                                  inputClassName="sm:w-64"
                               />
@@ -114,18 +114,6 @@ export default function SBConnect() {
                            )}
                         </div>
                      ))}
-                     {/* <div key={"Patreon"} className="flex flex-col gap-4 items-center border-t border-accent-purple pt-12 ">
-                        <p>Finally, if you really enjoyed reading about Dan and Tiernan and would like to give them a little extra love, you can support me in bringing their full story to life by joining my patreon below.</p><br/><br/>
-                        <p className="pb-4">Find the summary of support tiers that will be active leading up to the series launch below. All pre-launch Discord roles are permanent - grab yours today!</p>
-                        <ul className="text-start list-disc pl-4 lg:pl-16 text-sm">
-                           <li className='pb-3'><strong>Pre-Launch Supporter ($3)</strong>: Exclusive access to side stories, character sketches, behind the scenes processes. Receive a permanent discord role denoting you as an early supporter.</li>
-                           <li className='pb-3'><strong>Early Audiobook Funder ($8)</strong>:  Everything that Pre-Launch Supporter gets you, plus contribute to the series audiobook fund. Receive the audiobook version to my upcoming second Hack & Harrow short, when it becomes available. Plus, get a permanent discord role. </li>
-                           <li><strong>Primordial Super-Fan ($20)</strong>: For those who really want to show extra support - which I appreciate FULLY! Receive everything that Early Audiobook Funder gets you, plus a special permanent super-shiny Discord role and private chat channel.</li>
-                        </ul>
-                        <Button href={"https://www.patreon.com/c/dystrohdreams"} variant="outline" size="md" className="inline-block min-w-60 text-center my-4">
-                           Check out my Patreon
-                        </Button>
-                     </div> */}
                   </div>
                </GlowPanel>
             </main>

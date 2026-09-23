@@ -154,7 +154,7 @@ export default async function BookPage({ params }: Props) {
         </div>
 
         {book.editions.length > 0 && (
-          <section className="flex flex-col gap-6 w-full mb-12" aria-labelledby="editions-heading">
+          <section className="flex flex-col gap-6 w-full mb-12" aria-labelledby="editions-heading" id="editions">
             <h2
               id="editions-heading"
               className="text-2xl font-display font-semibold uppercase tracking-[0.3em] text-foreground"

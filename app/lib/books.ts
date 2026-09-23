@@ -39,6 +39,7 @@ export type Edition = {
 };
 
 export type BookStatus = "ARCs Available" | "ALCs Available" | "Available Now" | "Preorder" | "Coming Soon";
+export type BookLinks = Record<string, Record<string, string>>;
 
 export type Series = {
   slug: string;
@@ -89,6 +90,29 @@ export const SERIES: Series[] = [
   },
 ];
 
+export const BOOK_LINKS: BookLinks = {
+  "static-bind": {
+    "goodreads": "https://www.goodreads.com/book/show/258342436-static-bind",
+    "amazon-ebook": "https://www.amazon.com/dp/B0HH81JK4C/",
+    "apple-ebook": "https://books.apple.com/us/book/static-bind/id6806896293",
+    "kobo-ebook": "https://www.kobo.com/us/en/ebook/static-bind",
+    "barnes-ebook": "https://www.barnesandnoble.com/w/static-bind-dystro-han/1151310528?ean=2940197401977",
+    "smashWords-ebook": "https://www.smashwords.com/books/view/2095645",
+    "bookshop-org-ebook": "https://bookshop.org/p/books/static-bind-hack-harrow-0-dystro-han/519bae42fe7db1ae",
+    "audible-audio": "https://www.audible.com/pd/Static-Bind-Audiobook/B0HKL2NRBZ",
+    "spotify-audio": "https://open.spotify.com/show/0wav8lGUJ4setkvfpNd0gF?si=375dcb654e284f41",
+    "apple-books-audio": "https://books.apple.com/us/audiobook/static-bind-a-dark-cyberpunk-mm-romance-short/id6812357849",
+    // "google-play-audio": "",
+    // "audioBooks-com-audio": "",
+    "kobo-audio": "https://kobo.com/en/ebook/static-bind-a-dark-cyberpunk-mm-romance-short-1",
+    "barnes-audio": "https://www.barnesandnoble.com/w/static-bind-dystro-han/1151310528?ean=2940204991309",
+    "libro-fm-audio": "https://libro.fm/audiobooks/9798952631021-static-bind-a-dark-cyberpunk-mm-romance-short",
+    "24symbols-audio": "https://www.24symbols.com/book/english/dystro-han/static-bind-a-dark-cyberpunk-mm-romance-short?id=5751179",
+    "tuneIn-audio": "https://tunein.com/podcasts/Fiction---Gothic/Static-Bind-A-Dark-Cyberpunk-MM-Romance-Short-p4795740/",
+    "bookmate-audio": "https://bookmate.com/audiobooks/zizpusDO",
+  }
+}
+
 export const BOOKS: Book[] = [
   {
     slug: "static-bind",
@@ -123,12 +147,12 @@ export const BOOKS: Book[] = [
         imageAlt:
           "Static Bind ebook cover art: two men entangled together, one with a glowing red eye, against a red glitch-effect cyberpunk cityscape",
         retailerLinks: [
-          { retailer: "Amazon", url: "https://www.amazon.com/dp/B0HH81JK4C/" },
-          { retailer: "Apple", url: "https://books.apple.com/us/book/static-bind/id6806896293" },
-          { retailer: "Kobo", url: "https://www.kobo.com/us/en/ebook/static-bind" },
-          { retailer: "Barnes & Noble", url: "https://www.barnesandnoble.com/w/static-bind-dystro-han/1151210363" },
-          { retailer: "SmashWords", url: "https://www.smashwords.com/books/view/2095645" },
-          { retailer: "Bookshop.org", url: "https://bookshop.org/p/books/static-bind-hack-harrow-0-dystro-han/519bae42fe7db1ae" },
+          { retailer: "Amazon", url: BOOK_LINKS["static-bind"]["amazon-ebook"] },
+          { retailer: "Apple", url: BOOK_LINKS["static-bind"]["apple-ebook"] },
+          { retailer: "Kobo", url: BOOK_LINKS["static-bind"]["kobo-ebook"] },
+          { retailer: "Barnes & Noble", url: BOOK_LINKS["static-bind"]["barnes-ebook"] },
+          { retailer: "SmashWords", url: BOOK_LINKS["static-bind"]["smashwords-ebook"] },
+          { retailer: "Bookshop.org", url: BOOK_LINKS["static-bind"]["bookshop-org-ebook"] },
           // { retailer: "Tolino", url: "https://www.thalia.de/shop/home/artikeldetails/A1081518379" },
           // { retailer: "Vivlio", url: "https://shop.vivlio.com/product/9798952631007_9798952631007_10020/static-bind" },
         ],
@@ -143,17 +167,17 @@ export const BOOKS: Book[] = [
         imageAlt:
           "Static Bind audiobook cover art: two men entangled together, one with a glowing red eye, against a red glitch-effect cyberpunk cityscape",
         retailerLinks: [
-          { retailer: "Audible", url: "https://www.audible.com/pd/Static-Bind-Audiobook/B0HKL2NRBZ"},
-          { retailer: "Spotify", url: "https://open.spotify.com/show/0wav8lGUJ4setkvfpNd0gF?si=375dcb654e284f41"},
-          { retailer: "Apple Books", url: "https://books.apple.com/us/audiobook/static-bind-a-dark-cyberpunk-mm-romance-short/id6812357849"},
-          // { retailer: "Google Play", url: ""},
-          // { retailer: "AudioBooks.com", url: ""},
-          { retailer: "Kobo", url: "https://kobo.com/en/ebook/static-bind-a-dark-cyberpunk-mm-romance-short-1"},
-          { retailer: "Barnes & Noble", url: "https://www.barnesandnoble.com/w/static-bind-dystro-han/1151310528?ean=2940204991309"},
-          { retailer: "Libro.fm", url: "https://libro.fm/audiobooks/9798952631021-static-bind-a-dark-cyberpunk-mm-romance-short"},
-          { retailer: "24Symbols", url: "https://www.24symbols.com/book/english/dystro-han/static-bind-a-dark-cyberpunk-mm-romance-short?id=5751179"},
-          { retailer: "TuneIn", url: "https://tunein.com/podcasts/Fiction---Gothic/Static-Bind-A-Dark-Cyberpunk-MM-Romance-Short-p4795740/"},
-          { retailer: "Bookmate", url: "https://bookmate.com/audiobooks/zizpusDO"}
+          { retailer: "Audible", url: BOOK_LINKS["static-bind"]["audible-audio"]},
+          { retailer: "Spotify", url: BOOK_LINKS["static-bind"]["spotify-audio"]},
+          { retailer: "Apple Books", url: BOOK_LINKS["static-bind"]["apple-books-audio"]},
+          // { retailer: "Google Play", url: BOOK_LINKS["static-bind"]["amazon-audio"]},
+          // { retailer: "AudioBooks.com", url: BOOK_LINKS["static-bind"]["amazon-audio"]},
+          { retailer: "Kobo", url: BOOK_LINKS["static-bind"]["kobo-audio"]},
+          { retailer: "Barnes & Noble", url: BOOK_LINKS["static-bind"]["barnes-audio"]},
+          { retailer: "Libro.fm", url: BOOK_LINKS["static-bind"]["libro-fm-audio"]},
+          { retailer: "24Symbols", url: BOOK_LINKS["static-bind"]["24symbols-audio"]},
+          { retailer: "TuneIn", url: BOOK_LINKS["static-bind"]["tunein-audio"]},
+          { retailer: "Bookmate", url: BOOK_LINKS["static-bind"]["bookmate-audio"]}
         ],
       },
       {
