@@ -6,6 +6,7 @@ import { Button } from "../components/button"
 import { GlowPanel } from "../components/glow-panel"
 import { NewsletterForm } from "../components/newsletter-form"
 import { BOOK_LINKS } from "../lib/books"
+import Image from "next/image"
 
 export const metadata: Metadata = {
    title: "Thank you for being an ARC reader",
@@ -28,12 +29,12 @@ type ARC_LINK = {
    disabledText?:string;
 }
 const CM_CONTENT:ARC_LINK[] = [
-    {
-        id: "patreon",
-        href: "https://www.patreon.com/c/dystrohdreams",
-        label:"Join my Patreon",
-        textBody: "Join my Patreon free tier to get the Static Bind epilogue, bonus art, and more. New free content posted every month. See below for instructions on how to join for free. If you want to give Danil and Tiernan a little extra love, check out the paid membership levels!"
-    },
+   //  {
+   //      id: "patreon",
+   //      href: "https://www.patreon.com/c/dystrohdreams",
+   //      label:"Join my Patreon",
+   //      textBody: "Join my Patreon free tier to get the Static Bind epilogue, bonus art, and more. New content posted every month. See below for instructions on how to join for free. If you want to give Danil and Tiernan a little extra love, check out the paid membership levels!"
+   //  },
     {
         id: "preorder",
         href: "",
@@ -79,7 +80,6 @@ export default function ArcThankYou() {
                     </div>
                     <div key={"audiobook"} className="flex flex-col gap-6 items-center text-center border-accent-purple border-t pt-12">
                         <p>Are you an audiobook listener? Listen to the Static Bind audiobook, narrated by Brendan North, on Kobo Plus or grab a copy from any of the retailers listed below.</p>
-                        <p>Alternatively, get full access in the Patreon app by joining my Patreon at the Early Audiobook Funder tier. Any additional contributions will go toward funding the rest of the series' audiobooks and you shall be credited as an Executive Producer. See the following section for details on how to join.</p>
                         <div className="flex flex-col md:flex-row gap-4">
                             <Button href={BOOK_LINKS["static-bind"]["audible-audio"]} variant="outline" target="_blank" size="sm" className="inline-block min-w-60 text-center">
                                 Audible
@@ -95,8 +95,25 @@ export default function ArcThankYou() {
                         <Button href={"/books/static-bind#editions"} variant="outline" target="_blank" size="md" className="inline-block min-w-60 text-center">
                             More about Static Bind
                         </Button>
+                        <p>Alternatively, get full access in the Patreon app by joining my Patreon at the Early Audiobook Funder tier. Any additional contributions will go toward funding the rest of the series' audiobooks and you shall be credited as an Executive Producer. See the following section for details on how to join.</p>
                     </div>
-
+                     <div key={"Join my Patreon"} className="flex flex-col gap-6 items-center text-center border-accent-purple border-t pt-12">
+                        <p>Join my Patreon free tier to get the Static Bind epilogue, bonus art, and more. New content posted every month. See below for instructions on how to join for free. </p>
+                        <img
+                           src={"/img/patreon-free-tier.jpg"}
+                           alt={"Screenshot of the Patreon page with indicators on how to join the free tier"}
+                           className="w-full object-contain hidden sm:block"
+                        />
+                        <img
+                           src={"/img/patreon-free-tier-mobile.jpg"}
+                           alt={"Screenshot of the Patreon page with indicators on how to join the free tier"}
+                           className="w-full object-contain block sm:hidden"
+                        />
+                        <p>If you want to give Danil and Tiernan a little extra love, check out the paid membership levels!</p>
+                        <Button href={"https://www.patreon.com/c/dystrohdreams"} variant="outline" target="_blank" size="md" className="inline-block min-w-60 text-center">
+                           Join my Patreon
+                        </Button>
+                     </div>
 
                      {CM_CONTENT.map((option) => (
                         <div key={option.label} className="flex flex-col gap-6 items-center text-center border-accent-purple border-t pt-12">
