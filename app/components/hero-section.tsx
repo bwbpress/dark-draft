@@ -45,6 +45,7 @@ export function HeroSection() {
         <NewsletterForm
           buttonLabel="Join the Newsletter"
           className="flex flex-col gap-4"
+          tags={['website-hero']}
         />
         <p className="text-center text-xs text-muted">
           General Newsletter goes out once or twice a month. Unsubscribe anytime.

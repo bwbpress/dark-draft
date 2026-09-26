@@ -83,6 +83,7 @@ export default function ArcThankYou() {
                                  buttonLabel="Sign up"
                                  className="flex flex-col gap-3 sm:flex-row sm:items-center"
                                  inputClassName="sm:w-64"
+                                 tags={['website-arc-connect']}
                               />
                            )}
                            {option.id !== "newsletter" && (

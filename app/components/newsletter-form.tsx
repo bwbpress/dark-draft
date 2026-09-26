@@ -7,6 +7,7 @@ type NewsletterFormProps = {
   buttonLabel: string;
   className?: string;
   inputClassName?: string;
+  tags?: string[]
 };
 
 const BASE_INPUT_CLASSES =
@@ -16,8 +17,10 @@ export function NewsletterForm({
   buttonLabel,
   className = "",
   inputClassName = "",
+  tags
 }: NewsletterFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const tagSet = tags ? tags.join(",") : undefined;
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -50,6 +53,8 @@ export function NewsletterForm({
       onSubmit={handleSubmit}
       className={className}
     >
+
+      {tagSet && <input type="hidden" name="meta_tags" value={tagSet} />}
       <input type="hidden" name="meta_web_form_id" value="968524833" />
       <input type="hidden" name="meta_split_id" value="" />
       <input type="hidden" name="listname" value="awlist6972684" />
