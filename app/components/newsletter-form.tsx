@@ -20,7 +20,7 @@ export function NewsletterForm({
   tags
 }: NewsletterFormProps) {
   const [submitted, setSubmitted] = useState(false);
-  const tagSet = tags ? tags.join(",") : undefined;
+  const tagSet = tags ? ["website", tags].join(",") : "website";
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -55,6 +55,7 @@ export function NewsletterForm({
     >
 
       {tagSet && <input type="hidden" name="meta_tags" value={tagSet} />}
+      <input type="hidden" name="meta_web_form_id" value="968524833" />
       <input type="hidden" name="meta_web_form_id" value="968524833" />
       <input type="hidden" name="meta_split_id" value="" />
       <input type="hidden" name="listname" value="awlist6972684" />
