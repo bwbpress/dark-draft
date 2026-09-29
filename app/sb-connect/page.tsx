@@ -105,6 +105,7 @@ export default function SBConnect() {
                                  buttonLabel={option.label || "Sign Up"}
                                  className="flex flex-col gap-3 sm:flex-row sm:items-center"
                                  inputClassName="sm:w-64"
+                                 tags={['website-sb-connect']}
                               />
                            )}
                            {option.id !== "newsletter" && (

@@ -116,7 +116,7 @@ export default async function BookPage({ params }: Props) {
                 <p className="text-muted text-sm mb-4">
                   Stay up to date with Hack & Harrow book one news!
                 </p>
-                <NewsletterForm buttonLabel="Join the Newsletter" className="w-full max-w-100 flex flex-col gap-2"/>
+                <NewsletterForm buttonLabel="Join the Newsletter" className="w-full max-w-100 flex flex-col gap-2" tags={[`website-${book.shortTitle.replace(" ", "-")}`]}/>
               </div>
             }
             {book.retailerLinks.length > 0 && (
