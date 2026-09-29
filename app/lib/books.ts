@@ -191,7 +191,7 @@ export const BOOKS: Book[] = [
       },
     ],
     featured: true,
-    arcLink: "https://forms.gle/LFipAdDC6xvgB4Kv5"
+    // arcLink: "https://forms.gle/LFipAdDC6xvgB4Kv5"
   },
   {
     slug: "hack-and-harrow-book-1-breach",

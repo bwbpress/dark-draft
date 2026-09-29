@@ -29,15 +29,8 @@ export function HeroSection() {
       </div>
 
       <GlowPanel id="newsletter" glow border="animated" className="flex flex-col gap-4 p-6 h-min">
-        <h2 className="font-display text-xl font-bold text-foreground uppercase">
-          Alc open until 9/27
-        </h2>
-        <p className="text-sm text-muted">
-          Listen to the audiobook for free! Apply now for the ALC of Static Bind, the spicy short story introduction to the Hack & Harrow series, releasing Spring 2027
-        </p>
-        <Button href="https://forms.gle/LFipAdDC6xvgB4Kv5" className="text-center">Get your free copy</Button>
         <h2 className="font-display text-xl font-bold text-foreground mt-4">
-          Already have your copy? Join my Newsletter instead
+          Join my Newsletter
         </h2>
         <p className="text-sm text-muted">
           Stay in the loop with behind-the-scenes updates, release announcements, bonus content and more.
