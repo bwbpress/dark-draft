@@ -95,9 +95,9 @@ export default function ArcThankYou() {
                         <Button href={"/books/static-bind#editions"} variant="outline" target="_blank" size="md" className="inline-block min-w-60 text-center">
                             More about Static Bind
                         </Button>
-                        <p>Alternatively, get full access in the Patreon app by joining my Patreon at the Early Audiobook Funder tier. Any additional contributions will go toward funding the rest of the series' audiobooks and you shall be credited as an Executive Producer. See the following section for details on how to join.</p>
+                        {/* <p>Alternatively, get full access in the Patreon app by joining my Patreon at the Early Audiobook Funder tier. Any additional contributions will go toward funding the rest of the series' audiobooks and you shall be credited as an Executive Producer. See the following section for details on how to join.</p> */}
                     </div>
-                     <div key={"Join my Patreon"} className="flex flex-col gap-6 items-center text-center border-accent-purple border-t pt-12">
+                     {/* <div key={"Join my Patreon"} className="flex flex-col gap-6 items-center text-center border-accent-purple border-t pt-12">
                         <p>Join my Patreon free tier to get the Static Bind epilogue, bonus art, and more. New content posted every month. See below for instructions on how to join for free. </p>
                         <img
                            src={"/img/patreon-free-tier.jpg"}
@@ -113,7 +113,7 @@ export default function ArcThankYou() {
                         <Button href={"https://www.patreon.com/c/dystrohdreams"} variant="outline" target="_blank" size="md" className="inline-block min-w-60 text-center">
                            Join my Patreon
                         </Button>
-                     </div>
+                     </div> */}
 
                      {CM_CONTENT.map((option) => (
                         <div key={option.label} className="flex flex-col gap-6 items-center text-center border-accent-purple border-t pt-12">
