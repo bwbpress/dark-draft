@@ -30,7 +30,7 @@ const providers = [
    },
    {
       id: "outlook",
-      name: "Outlook",
+      name: "Outlook/Hotmail",
       steps: [
          "Open the newsletter email (check Junk Email if you can't find it).",
          "If it's in Junk, select the email and click \"Not junk\" (or \"Report\" > \"Not junk\").",
