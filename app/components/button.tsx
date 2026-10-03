@@ -1,6 +1,6 @@
 import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 
-type Variant = "primary" | "outline" | "neutral";
+type Variant = "primary" | "outline" | "neutral" | "teal";
 type Size = "lg" | "md" | "sm";
 
 type CommonProps = {
@@ -31,6 +31,7 @@ const VARIANT_CLASSES: Record<Variant, string> = {
     "border border-accent-pink text-accent-pink transition-colors hover:bg-accent-pink hover:text-background",
   neutral:
     "border border-accent-pink text-foreground transition-colors hover:border-accent-blue hover:text-accent-blue",
+  teal: "border border-background bg-accent-blue text-background hover:bg-background hover:text-accent-blue hover:border-background"
 };
 
 const SIZE_CLASSES: Record<Size, string> = {
