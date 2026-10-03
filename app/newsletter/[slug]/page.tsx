@@ -104,14 +104,14 @@ export default async function PromoPage({ params }: Props) {
       {/* <BackgroundImageWithOverlay image="/img/Dystro-Han-BG.jpg" className="mt-40" /> */}
       <div className="relative flex flex-1 flex-col">
         <SiteHeader />
-        <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center px-6 sm:px-10 lg:px-0 my-4 lg:my-8">
+        <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center px-4 sm:px-10 lg:px-0 my-4 lg:my-8">
           <GlowPanel
             as="section"
             id="promo"
             background="gradient"
             border="animated"
             glow
-            className="flex w-full max-w-4xl flex-col items-center gap-4 p-2 sm:p-6 sm:pb-10"
+            className="flex w-full max-w-4xl flex-col items-center gap-4 p-4 sm:p-6 sm:pb-10"
           >
             {promo.blocks.map(renderBlock)}
           </GlowPanel>
