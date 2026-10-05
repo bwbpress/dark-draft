@@ -203,7 +203,7 @@ export const BOOKS: Book[] = [
     releaseDate: "Q2 2027",
     blurb: "Sexting the hot pianist: thrilling. Fighting your nemesis: electrifying. Realizing they're the same guy: well, shit.",
     description: "Sexting the hot pianist: thrilling.\nFighting your nemesis: electrifying.\nRealizing they're the same guy: well, shit.\n\nTiernan should be focusing on the job, but he can't stop texting that sexy, funny piano player he met in the hotel's lounge last night. It sure beats trying to save this half-botched heist with his incompetent crew. First the ignored check-ins, and now panic over someone's claim of seeing Harrow, Tiernan's mysterious masked rival, skulking around the now-empty hotel. If only that were true – he'd love a chance to take down that faceless, smug asshole who's been taunting him for years. Well, anyway, back to crafting a text reply with the perfect amount of winky faces…\n\nHarrow didn't intend for Enemy No. 1 to become completely smitten with him when he took the piano gig undercover. He might as well take advantage of the situation and distract Tiernan with kissy-heart emojis while quietly picking off his rude and bumbling crewmates. His mission is to grab the loot from the hotel vault before Tiernan can – but he's having trouble concentrating. Their texts are getting addictively steamy, and he can't deny that his rival is a total catch. It wouldn't hurt to have a little fun on the job, no?",
-    // isbn13: "SEO_PLACEHOLDER_ISBN13_the-datasource",
+    isbn13: { display: "979-8-952631-04-5 (ebook)", value: "9798952631045" },
     coverImage: "/img/books/hack-and-harrow/book1-breach-cover.jpg",
     coverImageThumb: "/img/books/hack-and-harrow/book1-breach-cover_small.webp",
     coverImageAlt:
