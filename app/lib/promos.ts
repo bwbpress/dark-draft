@@ -155,6 +155,42 @@ The audiobook features narration by [Brendon North](https://brendonnorth.com). A
       { type: "text", text: "Your newsletter poll participation means a lot! Your answer has been recorded." },
     ],
   },
+  { 
+    slug: "nl-arc", 
+    title: "Thank You For Your Response",
+    blocks: [
+      HEADER_IMAGE,
+      { type: "heading", text: "Thank you for your response!" },
+      { type: "text", text: "Your newsletter poll participation means a lot! Your answer has been recorded." },
+    ],
+  },
+  { 
+    slug: "nl-alc", 
+    title: "Thank You For Your Response",
+    blocks: [
+      HEADER_IMAGE,
+      { type: "heading", text: "Thank you for your response!" },
+      { type: "text", text: "Your newsletter poll participation means a lot! Your answer has been recorded." },
+    ],
+  },
+  { 
+    slug: "nl-covart", 
+    title: "Thank You For Your Response",
+    blocks: [
+      HEADER_IMAGE,
+      { type: "heading", text: "Thank you for your response!" },
+      { type: "text", text: "Your newsletter poll participation means a lot! Your answer has been recorded." },
+    ],
+  },
+  { 
+    slug: "nl-beta", 
+    title: "Thank You For Your Response",
+    blocks: [
+      HEADER_IMAGE,
+      { type: "heading", text: "Thank you for your response!" },
+      { type: "text", text: "Your newsletter poll participation means a lot! Your answer has been recorded." },
+    ],
+  },
 ];
 
 export function getAllPromos(): Promo[] {
